@@ -30,4 +30,6 @@ scene.add(camera);
 
 // Renderer
 
-const renderer = new THREE.WebGL1Renderer({ canvas: canvas });
+const renderer = new THREE.WebGLRenderer({ canvas: canvas });
+
+renderer.setSize(sizes.width, sizes.height);
