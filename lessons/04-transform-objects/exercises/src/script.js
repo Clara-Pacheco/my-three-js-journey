@@ -19,6 +19,8 @@ const mesh = new THREE.Mesh(geometry, material);
 mesh.position.set(0.7, -0.6, 1);
 scene.add(mesh);
 
+// Methods length(), distanceTo(), normalize() and set()
+
 console.log(mesh.position.length());
 
 console.log(mesh.position.distanceTo(new THREE.Vector3(0, 1, 2)));
@@ -43,12 +45,21 @@ const sizes = {
  * Camera
  */
 const camera = new THREE.PerspectiveCamera(75, sizes.width / sizes.height);
+
+// Position the camera
+
 camera.position.z = 3;
-camera.position.x = 1;
-camera.position.y = 1;
+// camera.position.x = 1;
+// camera.position.y = 1;
 scene.add(camera);
 
 console.log(mesh.position.distanceTo(camera.position));
+
+// Scale
+
+mesh.scale.x = 2;
+mesh.scale.y = 0.5;
+mesh.scale.z = 0.5;
 
 /**
  * Renderer
