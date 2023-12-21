@@ -21,6 +21,9 @@ console.log(mesh.position.length());
 
 console.log(mesh.position.distanceTo(new THREE.Vector3(0, 1, 2)));
 
+mesh.position.normalize();
+console.log(mesh.position.length());
+
 /**
  * Sizes
  */
