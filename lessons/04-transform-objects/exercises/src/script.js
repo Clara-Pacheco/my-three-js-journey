@@ -28,8 +28,8 @@ console.log(mesh.position.distanceTo(new THREE.Vector3(0, 1, 2)));
 
 // Axes Helper
 
-const axeshelper = new THREE.AxesHelper();
-scene.add(axeshelper);
+const axesHelper = new THREE.AxesHelper();
+scene.add(axesHelper);
 
 /**
  * Sizes
