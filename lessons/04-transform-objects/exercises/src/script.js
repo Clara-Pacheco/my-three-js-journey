@@ -26,6 +26,11 @@ console.log(mesh.position.distanceTo(new THREE.Vector3(0, 1, 2)));
 // mesh.position.normalize();
 // console.log(mesh.position.length());
 
+// Axes Helper
+
+const axeshelper = new THREE.AxesHelper();
+scene.add(axeshelper);
+
 /**
  * Sizes
  */
@@ -39,6 +44,8 @@ const sizes = {
  */
 const camera = new THREE.PerspectiveCamera(75, sizes.width / sizes.height);
 camera.position.z = 3;
+camera.position.x = 1;
+camera.position.y = 1;
 scene.add(camera);
 
 console.log(mesh.position.distanceTo(camera.position));
