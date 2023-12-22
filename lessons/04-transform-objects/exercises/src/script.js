@@ -45,12 +45,16 @@ const cube2 = new THREE.Mesh(
 
 group.add(cube2);
 
+cube2.position.x = -2;
+
 const cube3 = new THREE.Mesh(
   new THREE.BoxGeometry(1, 1, 1),
   new THREE.MeshBasicMaterial({ color: 0x0000ff })
 );
 
 group.add(cube3);
+
+cube3.position.x = 2;
 // Axes Helper
 
 const axesHelper = new THREE.AxesHelper();
