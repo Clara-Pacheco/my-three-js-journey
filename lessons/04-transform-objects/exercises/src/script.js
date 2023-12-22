@@ -37,6 +37,20 @@ const cube1 = new THREE.Mesh(
 );
 
 group.add(cube1);
+
+const cube2 = new THREE.Mesh(
+  new THREE.BoxGeometry(1, 1, 1),
+  new THREE.MeshBasicMaterial({ color: 0x00ff00 })
+);
+
+group.add(cube2);
+
+const cube3 = new THREE.Mesh(
+  new THREE.BoxGeometry(1, 1, 1),
+  new THREE.MeshBasicMaterial({ color: 0x0000ff })
+);
+
+group.add(cube3);
 // Axes Helper
 
 const axesHelper = new THREE.AxesHelper();
