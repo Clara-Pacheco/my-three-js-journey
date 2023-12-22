@@ -30,6 +30,13 @@ const scene = new THREE.Scene();
 
 const group = new THREE.Group();
 scene.add(group);
+
+const cube1 = new THREE.Mesh(
+  new THREE.BoxGeometry(1, 1, 1),
+  new THREE.MeshBasicMaterial({ color: 0xff0000 })
+);
+
+group.add(cube1);
 // Axes Helper
 
 const axesHelper = new THREE.AxesHelper();
