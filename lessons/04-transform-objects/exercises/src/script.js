@@ -28,6 +28,8 @@ const scene = new THREE.Scene();
 // mesh.position.normalize();
 // console.log(mesh.position.length());
 
+const group = new THREE.Group();
+scene.add(group);
 // Axes Helper
 
 const axesHelper = new THREE.AxesHelper();
