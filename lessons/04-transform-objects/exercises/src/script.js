@@ -55,6 +55,8 @@ scene.add(camera);
 
 console.log(mesh.position.distanceTo(camera.position));
 
+camera.lookAt(mesh.position);
+
 // Scale
 
 // mesh.scale.x = 2;
@@ -62,6 +64,12 @@ console.log(mesh.position.distanceTo(camera.position));
 // mesh.scale.z = 0.5;
 
 mesh.scale.set(2, 0.5, 0.5);
+
+// Rotation
+
+mesh.rotation.reorder("YXZ");
+mesh.rotation.y = 3.14159 * 0.25;
+mesh.rotation.x = Math.PI * 0.25;
 
 /**
  * Renderer
