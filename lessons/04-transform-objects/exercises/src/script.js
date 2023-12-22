@@ -9,21 +9,21 @@ const scene = new THREE.Scene();
 /**
  * Objects
  */
-const geometry = new THREE.BoxGeometry(1, 1, 1);
-const material = new THREE.MeshBasicMaterial({ color: 0xff0000 });
-const mesh = new THREE.Mesh(geometry, material);
+// const geometry = new THREE.BoxGeometry(1, 1, 1);
+// const material = new THREE.MeshBasicMaterial({ color: 0xff0000 });
+// const mesh = new THREE.Mesh(geometry, material);
 // mesh.position.x = 0.7;
 // mesh.position.y = -0.6;
 // mesh.position.z = 1;
 
-mesh.position.set(0.7, -0.6, 1);
-scene.add(mesh);
+// mesh.position.set(0.7, -0.6, 1);
+// scene.add(mesh);
 
 // Methods length(), distanceTo(), normalize() and set()
 
-console.log(mesh.position.length());
+// console.log(mesh.position.length());
 
-console.log(mesh.position.distanceTo(new THREE.Vector3(0, 1, 2)));
+// console.log(mesh.position.distanceTo(new THREE.Vector3(0, 1, 2)));
 
 // mesh.position.normalize();
 // console.log(mesh.position.length());
@@ -53,9 +53,9 @@ camera.position.z = 3;
 // camera.position.y = 1;
 scene.add(camera);
 
-console.log(mesh.position.distanceTo(camera.position));
+// console.log(mesh.position.distanceTo(camera.position));
 
-camera.lookAt(mesh.position);
+// camera.lookAt(mesh.position);
 
 // Scale
 
@@ -63,13 +63,13 @@ camera.lookAt(mesh.position);
 // mesh.scale.y = 0.5;
 // mesh.scale.z = 0.5;
 
-mesh.scale.set(2, 0.5, 0.5);
+// mesh.scale.set(2, 0.5, 0.5);
 
 // Rotation
 
-mesh.rotation.reorder("YXZ");
-mesh.rotation.y = 3.14159 * 0.25;
-mesh.rotation.x = Math.PI * 0.25;
+// mesh.rotation.reorder("YXZ");
+// mesh.rotation.y = 3.14159 * 0.25;
+// mesh.rotation.x = Math.PI * 0.25;
 
 /**
  * Renderer
