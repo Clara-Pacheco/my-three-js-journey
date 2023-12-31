@@ -36,7 +36,8 @@ renderer.setSize(sizes.width, sizes.height);
 const tick = () => {
   // Update objects
 
-  mesh.position.x += 0.01;
+  //   mesh.position.x += 0.01;
+  mesh.rotation.y += 0.01;
 
   // Render
 
@@ -44,7 +45,7 @@ const tick = () => {
 
   // Call the function 'tick' again on the next frame
 
-  //   window.requestAnimationFrame(tick);
+  window.requestAnimationFrame(tick);
 };
 
 tick();
