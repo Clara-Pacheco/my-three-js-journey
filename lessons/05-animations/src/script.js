@@ -28,12 +28,22 @@ const renderer = new THREE.WebGLRenderer({
   canvas: canvas,
 });
 renderer.setSize(sizes.width, sizes.height);
-renderer.render(scene, camera);
+
+// Animations
 
 // requestAnimationFrame
 
 const tick = () => {
-  console.log("tick");
+  // Update objects
+
+  mesh.position.x += 0.01;
+
+  // Render
+
+  renderer.render(scene, camera);
+
+  // Call the function 'tick' again on the next frame
+
   //   window.requestAnimationFrame(tick);
 };
 
