@@ -31,7 +31,15 @@ renderer.setSize(sizes.width, sizes.height);
 
 // Animations
 
+let time = Date.now();
+
 // requestAnimationFrame
+
+//Time
+
+const currentTime = Date.now();
+const delta = currentTime - time;
+time = currentTime;
 
 const tick = () => {
   // Update objects
