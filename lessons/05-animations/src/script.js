@@ -31,17 +31,20 @@ renderer.setSize(sizes.width, sizes.height);
 
 // Animations
 
-let time = Date.now();
-
 // requestAnimationFrame
 
-//Time
+// Previous time
 
-const currentTime = Date.now();
-const delta = currentTime - time;
-time = currentTime;
+let time = Date.now();
 
 const tick = () => {
+  // Current Time, delta and updating time for the next tick
+
+  const currentTime = Date.now();
+  const delta = currentTime - time;
+  time = currentTime;
+
+  console.log(delta);
   // Update objects
 
   //   mesh.position.x += 0.01;
