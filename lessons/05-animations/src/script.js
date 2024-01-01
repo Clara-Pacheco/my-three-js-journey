@@ -66,6 +66,7 @@ const tick = () => {
 
   camera.position.y = Math.sin(elapsedTime);
   camera.position.x = Math.cos(elapsedTime);
+  camera.lookAt(mesh.position);
 
   // Render
 
