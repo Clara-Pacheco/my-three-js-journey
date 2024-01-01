@@ -1,4 +1,7 @@
 import * as THREE from "three";
+import gsap from "gsap";
+
+console.log(gsap);
 
 // Canvas
 const canvas = document.querySelector("canvas.webgl");
@@ -11,6 +14,11 @@ const geometry = new THREE.BoxGeometry(1, 1, 1);
 const material = new THREE.MeshBasicMaterial({ color: 0xff0000 });
 const mesh = new THREE.Mesh(geometry, material);
 scene.add(mesh);
+
+// Animating with gsap
+
+gsap.to(mesh.position, { duration: 1, delay: 1, x: 2 });
+gsap.to(mesh.position, { duration: 1, delay: 1, x: 0 });
 
 // Sizes
 const sizes = {
@@ -71,9 +79,9 @@ const tick = () => {
 
   // Camera moving + looking at the center of the cube
 
-  camera.position.y = Math.sin(elapsedTime);
-  camera.position.x = Math.cos(elapsedTime);
-  camera.lookAt(mesh.position);
+  // camera.position.y = Math.sin(elapsedTime);
+  // camera.position.x = Math.cos(elapsedTime);
+  // camera.lookAt(mesh.position);
 
   // Render
 
