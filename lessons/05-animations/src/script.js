@@ -35,20 +35,34 @@ renderer.setSize(sizes.width, sizes.height);
 
 // Previous time
 
-let time = Date.now();
+// let time = Date.now();
+
+// Clock
+
+const clock = new THREE.Clock();
 
 const tick = () => {
   // Current Time, delta and updating time for the next tick
 
-  const currentTime = Date.now();
-  const delta = currentTime - time;
-  time = currentTime;
+  //   const currentTime = Date.now();
+  //   const delta = currentTime - time;
+  //   time = currentTime;
 
   //   console.log(delta);
+
+  // Clock
+
+  const elapsedTime = clock.getElapsedTime();
+
+  // Testing elapsedTime
+
+  console.log(elapsedTime);
   // Update objects
 
   //   mesh.position.x += 0.01;
-  mesh.rotation.y += 0.002 * delta;
+  //   mesh.rotation.y += 0.001 * delta;
+
+  mesh.rotation.y = elapsedTime;
 
   // Render
 
