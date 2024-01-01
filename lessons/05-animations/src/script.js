@@ -56,13 +56,13 @@ const tick = () => {
 
   // Testing elapsedTime
 
-  console.log(elapsedTime);
+  //   console.log(elapsedTime);
   // Update objects
 
   //   mesh.position.x += 0.01;
   //   mesh.rotation.y += 0.001 * delta;
 
-  mesh.rotation.y = elapsedTime;
+  mesh.rotation.y = elapsedTime * Math.PI * 2;
 
   // Render
 
