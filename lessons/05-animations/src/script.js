@@ -62,7 +62,10 @@ const tick = () => {
   //   mesh.position.x += 0.01;
   //   mesh.rotation.y += 0.001 * delta;
 
-  mesh.rotation.y = elapsedTime * Math.PI * 2;
+  //   mesh.rotation.y = elapsedTime * Math.PI * 2;
+
+  camera.position.y = Math.sin(elapsedTime);
+  camera.position.x = Math.cos(elapsedTime);
 
   // Render
 
