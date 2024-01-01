@@ -64,6 +64,13 @@ const tick = () => {
 
   //   mesh.rotation.y = elapsedTime * Math.PI * 2;
 
+  // Object moving
+
+  //   mesh.position.y = Math.sin(elapsedTime);
+  //   mesh.position.x = Math.cos(elapsedTime);
+
+  // Camera moving + looking at the center of the cube
+
   camera.position.y = Math.sin(elapsedTime);
   camera.position.x = Math.cos(elapsedTime);
   camera.lookAt(mesh.position);
