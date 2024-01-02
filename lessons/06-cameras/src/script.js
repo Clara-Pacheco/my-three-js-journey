@@ -1,5 +1,20 @@
 import * as THREE from "three";
 
+/*Cursor*/
+
+const cursor = {
+  x: 0,
+  y: 0,
+};
+
+window.addEventListener("mousemove", (e) => {
+  cursor.x = e.clientX / sizes.width - 0.5;
+  cursor.y = e.clientY / sizes.height - 0.5;
+
+  console.log(cursor.x);
+  console.log(cursor.y);
+});
+
 /**
  * Base
  */
@@ -41,7 +56,7 @@ const camera = new THREE.PerspectiveCamera(
 // );
 // camera.position.x = 2;
 // camera.position.y = 2;
-camera.position.z = 3;
+camera.position.z = 4;
 camera.lookAt(mesh.position);
 scene.add(camera);
 
