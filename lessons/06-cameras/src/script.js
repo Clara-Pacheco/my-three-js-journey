@@ -45,6 +45,10 @@ const camera = new THREE.PerspectiveCamera(
   100
 );
 
+// Controls
+
+const controls = new OrbitControls(camera, canvas);
+
 // const aspectRatio = sizes.width / sizes.height;
 // const camera = new THREE.OrthographicCamera(
 //   -1 * aspectRatio,
