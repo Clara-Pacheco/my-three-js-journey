@@ -45,10 +45,6 @@ const camera = new THREE.PerspectiveCamera(
   100
 );
 
-// Controls
-
-const controls = new OrbitControls(camera, canvas);
-
 // const aspectRatio = sizes.width / sizes.height;
 // const camera = new THREE.OrthographicCamera(
 //   -1 * aspectRatio,
@@ -63,6 +59,12 @@ const controls = new OrbitControls(camera, canvas);
 camera.position.z = 4;
 camera.lookAt(mesh.position);
 scene.add(camera);
+
+// Controls
+
+const controls = new OrbitControls(camera, canvas);
+controls.target.y = 1;
+controls.update();
 
 // Renderer
 const renderer = new THREE.WebGLRenderer({
