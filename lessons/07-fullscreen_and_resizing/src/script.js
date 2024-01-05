@@ -26,6 +26,12 @@ const sizes = {
   height: window.innerHeight,
 };
 
+// Listen to window resize
+
+window.addEventListener("resize", () => {
+  console.log("Window has been resized");
+});
+
 /**
  * Camera
  */
