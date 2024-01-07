@@ -36,7 +36,7 @@ window.addEventListener("resize", () => {
 
   // Update the camera
 
-  camera.aspect(sizes.width / sizes.height);
+  camera.aspect = sizes.width / sizes.height;
   camera.updateProjectionMatrix();
 
   // Update the renderer
@@ -49,7 +49,7 @@ window.addEventListener("resize", () => {
 
 window.addEventListener("dblclick", () => {
   if (!document.fullscreenElement) {
-    console.log("Go fullscreen");
+    canvas.requestFullscreen();
   } else {
     console.log("Leave fullscreen");
   }
