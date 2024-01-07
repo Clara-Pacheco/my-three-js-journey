@@ -48,7 +48,11 @@ window.addEventListener("resize", () => {
 // Listen to a double-click
 
 window.addEventListener("dblclick", () => {
-  console.log("Double-click");
+  if (!document.fullscreenElement) {
+    console.log("Go fullscreen");
+  } else {
+    console.log("Leave fullscreen");
+  }
 });
 
 /**
