@@ -51,7 +51,7 @@ window.addEventListener("dblclick", () => {
   if (!document.fullscreenElement) {
     canvas.requestFullscreen();
   } else {
-    console.log("Leave fullscreen");
+    document.exitFullscreen();
   }
 });
 
