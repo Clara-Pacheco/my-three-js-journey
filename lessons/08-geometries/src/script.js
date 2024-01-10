@@ -18,6 +18,10 @@ const positionsArray = new Float32Array([0, 0, 0, 0, 1, 0, 1, 0, 0]);
 
 const positionsAttribute = new THREE.BufferAttribute(positionsArray, 3);
 
+// Create a geometry by using a BufferGeometry
+
+const geometry = new THREE.BufferGeometry();
+
 // Object
 // const geometry = new THREE.BoxGeometry(1, 1, 1, 2, 2, 2);
 const material = new THREE.MeshBasicMaterial({
