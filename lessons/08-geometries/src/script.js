@@ -22,6 +22,10 @@ const positionsAttribute = new THREE.BufferAttribute(positionsArray, 3);
 
 const geometry = new THREE.BufferGeometry();
 
+// Add the positionsAttribute as parameter to the BufferGeometry + naming this attribute as 'positions'
+
+geometry.setAttribute("position", positionsAttribute);
+
 // Object
 // const geometry = new THREE.BoxGeometry(1, 1, 1, 2, 2, 2);
 const material = new THREE.MeshBasicMaterial({
