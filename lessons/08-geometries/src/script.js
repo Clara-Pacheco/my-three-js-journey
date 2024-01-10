@@ -14,6 +14,10 @@ const scene = new THREE.Scene();
 
 const positionsArray = new Float32Array([0, 0, 0, 0, 1, 0, 1, 0, 0]);
 
+// Convert the Float32Array data in BufferAttribute
+
+const positionsAttribute = new THREE.BufferAttribute(positionsArray, 3);
+
 // Object
 // const geometry = new THREE.BoxGeometry(1, 1, 1, 2, 2, 2);
 const material = new THREE.MeshBasicMaterial({
