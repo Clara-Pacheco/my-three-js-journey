@@ -12,19 +12,23 @@ const scene = new THREE.Scene();
 
 // Create the vertices positions using Float32Array
 
-const positionsArray = new Float32Array([0, 0, 0, 0, 1, 0, 1, 0, 0]);
+// const positionsArray = new Float32Array([0, 0, 0, 0, 1, 0, 1, 0, 0]);
 
 // Convert the Float32Array data in BufferAttribute
 
-const positionsAttribute = new THREE.BufferAttribute(positionsArray, 3);
+// const positionsAttribute = new THREE.BufferAttribute(positionsArray, 3);
+
+// Create a geometry by using a BufferGeometry
+
+// const geometry = new THREE.BufferGeometry();
+
+// Add the positionsAttribute as parameter to the BufferGeometry + naming this attribute as 'positions'
+
+// geometry.setAttribute("position", positionsAttribute);
 
 // Create a geometry by using a BufferGeometry
 
 const geometry = new THREE.BufferGeometry();
-
-// Add the positionsAttribute as parameter to the BufferGeometry + naming this attribute as 'positions'
-
-geometry.setAttribute("position", positionsAttribute);
 
 // Object
 // const geometry = new THREE.BoxGeometry(1, 1, 1, 2, 2, 2);
