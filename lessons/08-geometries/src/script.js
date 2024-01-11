@@ -30,6 +30,28 @@ const scene = new THREE.Scene();
 
 const geometry = new THREE.BufferGeometry();
 
+// Create the data containing the triangles' positions of the vertices using Float32Array
+
+// Define how many triangles we want to have
+
+const count = 50;
+
+const positionsArray = new Float32Array(count * 3 * 3);
+
+// Fill this array with random values
+
+for (let i = 0; i < count * 3 * 3; i++) {
+  positionsArray[i] = (Math.random() - 0.5) * 4;
+}
+
+// Convert the Float32Array data in BufferAttribute
+
+const positionsAttribute = new THREE.BufferAttribute(positionsArray, 3);
+
+// Add this attribute to the geometry - BufferGeometry
+
+geometry.setAttribute("position", positionsAttribute);
+
 // Object
 // const geometry = new THREE.BoxGeometry(1, 1, 1, 2, 2, 2);
 const material = new THREE.MeshBasicMaterial({
