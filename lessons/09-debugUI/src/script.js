@@ -9,6 +9,8 @@ import GUI from "lil-gui";
 
 const gui = new GUI();
 
+const debugObject = {};
+
 /**
  * Base
  */
