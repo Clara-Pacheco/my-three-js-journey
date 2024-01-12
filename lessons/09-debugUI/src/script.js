@@ -24,7 +24,7 @@ const scene = new THREE.Scene();
  * Object
  */
 
-debugObject.color = "#d1005a";
+debugObject.color = "#2d00d1";
 
 const geometry = new THREE.BoxGeometry(1, 1, 1, 2, 2, 2);
 const material = new THREE.MeshBasicMaterial({ color: debugObject.color });
@@ -58,9 +58,9 @@ gui.add(material, "wireframe");
 
 // Color tweak
 
-// gui.addColor(material, "color").onChange(() => {
-//   console.log(material.color.getHexString());
-// });
+gui.addColor(debugObject, "color").onChange(() => {
+  material.color.set(debugObject.color);
+});
 
 /**
  * Sizes
