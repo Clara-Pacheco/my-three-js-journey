@@ -22,7 +22,7 @@ const scene = new THREE.Scene();
  * Object
  */
 const geometry = new THREE.BoxGeometry(1, 1, 1, 2, 2, 2);
-const material = new THREE.MeshBasicMaterial({ color: "#ff0000" });
+const material = new THREE.MeshBasicMaterial({ color: "#ea00a1" });
 const mesh = new THREE.Mesh(geometry, material);
 scene.add(mesh);
 
@@ -53,7 +53,9 @@ gui.add(material, "wireframe");
 
 // Color tweak
 
-gui.addColor(material, "color");
+gui.addColor(material, "color").onChange(() => {
+  console.log(material.color.getHexString());
+});
 
 /**
  * Sizes
