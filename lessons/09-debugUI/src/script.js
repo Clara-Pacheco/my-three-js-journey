@@ -51,6 +51,10 @@ gui.add(mesh, "visible");
 
 gui.add(material, "wireframe");
 
+// Color tweak
+
+gui.addColor(material, "color");
+
 /**
  * Sizes
  */
