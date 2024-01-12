@@ -35,6 +35,8 @@ gui.add(mesh.position, "y").min(-3).max(3).step(0.01).name("elevation");
 // Debug  a variable - we need to create an object which will contain this
 // variable as property
 
+gui.add(mesh, "visible");
+
 const myVariable = 1337;
 
 const myObject = {
