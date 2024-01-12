@@ -4,6 +4,12 @@ import gsap from "gsap";
 import GUI from "lil-gui";
 
 /**
+ * Debug
+ */
+
+const gui = new GUI();
+
+/**
  * Base
  */
 // Canvas
