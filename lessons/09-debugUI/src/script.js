@@ -53,9 +53,9 @@ gui.add(material, "wireframe");
 
 // Color tweak
 
-gui.addColor(material, "color").onChange(() => {
-  console.log(material.color.getHexString());
-});
+// gui.addColor(material, "color").onChange(() => {
+//   console.log(material.color.getHexString());
+// });
 
 /**
  * Sizes
