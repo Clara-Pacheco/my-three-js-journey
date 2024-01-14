@@ -62,11 +62,32 @@ gui.addColor(debugObject, "color").onChange(() => {
   material.color.set(debugObject.color);
 });
 
+// Tweak a function/button
 debugObject.spin = () => {
   gsap.to(mesh.rotation, { y: mesh.rotation.y + Math.PI * 2 });
 };
 
 gui.add(debugObject, "spin");
+
+// Tweaking the geometry
+
+debugObject.subdivision = 2;
+
+gui
+  .add(debugObject, "subdivision")
+  .min(1)
+  .max(20)
+  .step(1)
+  .onFinishChange(() => {
+    mesh.geometry = new THREE.BoxGeometry(
+      1,
+      1,
+      1,
+      debugObject.subdivision,
+      debugObject.subdivision,
+      debugObject.subdivision
+    );
+  });
 
 /**
  * Sizes
