@@ -7,7 +7,11 @@ import GUI from "lil-gui";
  * Debug
  */
 
-const gui = new GUI();
+const gui = new GUI({
+  width: 300,
+  title: "Clara's debug UI",
+  closeFolders: true,
+});
 
 const debugObject = {};
 
