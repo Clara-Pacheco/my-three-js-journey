@@ -35,7 +35,9 @@ scene.add(mesh);
 
 // gui.add(mesh.position, "y", -3, 3, 0.01);
 
-gui.add(mesh.position, "y").min(-3).max(3).step(0.01).name("elevation");
+const cubeTweaks = gui.addFolder("Awesome cube");
+
+cubeTweaks.add(mesh.position, "y").min(-3).max(3).step(0.01).name("elevation");
 
 // Debug  a variable - we need to create an object which will contain this
 // variable as property
@@ -46,19 +48,19 @@ const myObject = {
   myVariable: 1337,
 };
 
-gui.add(myObject, "myVariable");
+cubeTweaks.add(myObject, "myVariable");
 
 // Add the property 'visible' of the object 'mesh' to the method gui.add()
 
-gui.add(mesh, "visible");
+cubeTweaks.add(mesh, "visible");
 
 // Add the property 'wireframe' of the object material to the method gui.add()
 
-gui.add(material, "wireframe");
+cubeTweaks.add(material, "wireframe");
 
 // Color tweak
 
-gui.addColor(debugObject, "color").onChange(() => {
+cubeTweaks.addColor(debugObject, "color").onChange(() => {
   material.color.set(debugObject.color);
 });
 
@@ -67,13 +69,13 @@ debugObject.spin = () => {
   gsap.to(mesh.rotation, { y: mesh.rotation.y + Math.PI * 2 });
 };
 
-gui.add(debugObject, "spin");
+cubeTweaks.add(debugObject, "spin");
 
 // Tweaking the geometry
 
 debugObject.subdivision = 2;
 
-gui
+cubeTweaks
   .add(debugObject, "subdivision")
   .min(1)
   .max(20)
