@@ -10,8 +10,10 @@ import GUI from "lil-gui";
 const gui = new GUI({
   width: 300,
   title: "Clara's debug UI",
-  closeFolders: true,
+  closeFolders: false,
 });
+
+gui.close();
 
 const debugObject = {};
 
