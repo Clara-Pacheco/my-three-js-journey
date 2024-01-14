@@ -17,6 +17,12 @@ const gui = new GUI({
 
 gui.hide();
 
+window.addEventListener("keydown", (e) => {
+  if (e.key == "h") {
+    gui.show();
+  }
+});
+
 const debugObject = {};
 
 /**
