@@ -19,7 +19,7 @@ gui.hide();
 
 window.addEventListener("keydown", (e) => {
   if (e.key == "h") {
-    gui.show();
+    gui.show(gui._hidden);
   }
 });
 
