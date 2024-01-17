@@ -35,7 +35,7 @@ loadManager.onError = () => {
 
 loadManager.on;
 const textureLoader = new THREE.TextureLoader(loadManager);
-const texture = textureLoader.load(
+const colorTexture = textureLoader.load(
   "/textures/door/color.jpg",
   () => {
     console.log("load");
@@ -47,7 +47,10 @@ const texture = textureLoader.load(
     console.log("error");
   }
 );
-texture.colorSpace = THREE.SRGBColorSpace;
+colorTexture.colorSpace = THREE.SRGBColorSpace;
+
+const alphaTexture = textureLoader.load("/textures/door/alpha.jpg");
+alphaTexture.colorSpace = THREE.SRGBColorSpace;
 
 /**
  * Base
@@ -62,7 +65,7 @@ const scene = new THREE.Scene();
  * Object
  */
 const geometry = new THREE.BoxGeometry(1, 1, 1);
-const material = new THREE.MeshBasicMaterial({ map: texture });
+const material = new THREE.MeshBasicMaterial({ map: colorTexture });
 const mesh = new THREE.Mesh(geometry, material);
 scene.add(mesh);
 
