@@ -55,6 +55,9 @@ alphaTexture.colorSpace = THREE.SRGBColorSpace;
 const heightTexture = textureLoader.load("/textures/door/height.jpg");
 heightTexture.colorSpace = THREE.SRGBColorSpace;
 
+const normalTexture = textureLoader.load("/textures/door/normal.jpg");
+normalTexture.colorSpace = THREE.SRGBColorSpace;
+
 /**
  * Base
  */
