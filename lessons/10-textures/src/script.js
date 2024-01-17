@@ -58,6 +58,11 @@ heightTexture.colorSpace = THREE.SRGBColorSpace;
 const normalTexture = textureLoader.load("/textures/door/normal.jpg");
 normalTexture.colorSpace = THREE.SRGBColorSpace;
 
+const ambientOcclusionTexture = textureLoader.load(
+  "/textures/door/ambientOcclusion.jpg"
+);
+
+ambientOcclusionTexture.colorSpace = THREE.SRGBColorSpace;
 /**
  * Base
  */
