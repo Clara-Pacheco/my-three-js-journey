@@ -66,6 +66,9 @@ ambientOcclusionTexture.colorSpace = THREE.SRGBColorSpace;
 
 const metalTexture = textureLoader.load("/textures/door/metalness.jpg");
 metalTexture.colorSpace = THREE.SRGBColorSpace;
+
+const roughnessTexture = textureLoader.load("/textures/door/roughness.jpg");
+roughnessTexture.colorSpace = THREE.SRGBColorSpace;
 /**
  * Base
  */
