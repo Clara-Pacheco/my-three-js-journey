@@ -53,14 +53,21 @@ colorTexture.colorSpace = THREE.SRGBColorSpace;
  * Repeat Property
  */
 
-colorTexture.repeat.x = 2;
-colorTexture.repeat.y = 3;
+// colorTexture.repeat.x = 2;
+// colorTexture.repeat.y = 3;
 
 // colorTexture.wrapS = THREE.RepeatWrapping;
 // colorTexture.wrapT = THREE.RepeatWrapping;
 
 colorTexture.wrapS = THREE.MirroredRepeatWrapping;
 colorTexture.wrapT = THREE.MirroredRepeatWrapping;
+
+/**
+ * Offset Property
+ */
+
+colorTexture.offset.x = 0.5;
+colorTexture.offset.y = 0.5;
 
 // const alphaTexture = textureLoader.load(
 //   "/textures/door/alpha.jpg",
