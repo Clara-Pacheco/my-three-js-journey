@@ -53,8 +53,8 @@ colorTexture.colorSpace = THREE.SRGBColorSpace;
  * Repeat Property
  */
 
-// colorTexture.repeat.x = 2;
-// colorTexture.repeat.y = 3;
+colorTexture.repeat.x = 2;
+colorTexture.repeat.y = 3;
 
 // colorTexture.wrapS = THREE.RepeatWrapping;
 // colorTexture.wrapT = THREE.RepeatWrapping;
