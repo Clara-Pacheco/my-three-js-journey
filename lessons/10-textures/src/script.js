@@ -78,7 +78,7 @@ colorTexture.colorSpace = THREE.SRGBColorSpace;
 // colorTexture.center.x = 0.5;
 // colorTexture.center.y = 0.5;
 
-colorTexture.minFilter = THREE.NearestFilter;
+colorTexture.magFilter = THREE.NearestFilter;
 
 // const alphaTexture = textureLoader.load(
 //   "/textures/door/alpha.jpg",
