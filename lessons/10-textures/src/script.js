@@ -36,7 +36,7 @@ loadManager.onError = () => {
 loadManager.on;
 const textureLoader = new THREE.TextureLoader(loadManager);
 const colorTexture = textureLoader.load(
-  "/textures/checkerboard-1024x1024.png",
+  "/textures/checkerboard-8x8.png",
   () => {
     console.log("load");
   },
