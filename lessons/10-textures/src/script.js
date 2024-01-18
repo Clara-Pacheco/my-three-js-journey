@@ -36,7 +36,7 @@ loadManager.onError = () => {
 loadManager.on;
 const textureLoader = new THREE.TextureLoader(loadManager);
 const colorTexture = textureLoader.load(
-  "/textures/checkerboard-8x8.png",
+  "/textures/minecraft.png",
   () => {
     console.log("load");
   },
@@ -78,7 +78,8 @@ colorTexture.colorSpace = THREE.SRGBColorSpace;
 // colorTexture.center.x = 0.5;
 // colorTexture.center.y = 0.5;
 
-colorTexture.magFilter = THREE.NearestFilter;
+colorTexture.generateMipmaps = false;
+colorTexture.minFilter = THREE.NearestFilter;
 
 // const alphaTexture = textureLoader.load(
 //   "/textures/door/alpha.jpg",
