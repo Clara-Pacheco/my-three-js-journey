@@ -49,26 +49,90 @@ const colorTexture = textureLoader.load(
 );
 colorTexture.colorSpace = THREE.SRGBColorSpace;
 
-const alphaTexture = textureLoader.load("/textures/door/alpha.jpg");
-alphaTexture.colorSpace = THREE.SRGBColorSpace;
+// const alphaTexture = textureLoader.load(
+//   "/textures/door/alpha.jpg",
+//   () => {
+//     console.log("load");
+//   },
+//   () => {
+//     console.log("progress");
+//   },
+//   () => {
+//     console.log("error");
+//   }
+// );
+// alphaTexture.colorSpace = THREE.SRGBColorSpace;
 
-const heightTexture = textureLoader.load("/textures/door/height.jpg");
-heightTexture.colorSpace = THREE.SRGBColorSpace;
+// const heightTexture = textureLoader.load(
+//   "/textures/door/height.jpg",
+//   () => {
+//     console.log("load");
+//   },
+//   () => {
+//     console.log("progress");
+//   },
+//   () => {
+//     console.log("error");
+//   }
+// );
+// heightTexture.colorSpace = THREE.SRGBColorSpace;
 
-const normalTexture = textureLoader.load("/textures/door/normal.jpg");
-normalTexture.colorSpace = THREE.SRGBColorSpace;
+// const normalTexture = textureLoader.load(
+//   "/textures/door/normal.jpg",
+//   () => {
+//     console.log("load");
+//   },
+//   () => {
+//     console.log("progress");
+//   },
+//   () => {
+//     console.log("error");
+//   }
+// );
+// normalTexture.colorSpace = THREE.SRGBColorSpace;
 
-const ambientOcclusionTexture = textureLoader.load(
-  "/textures/door/ambientOcclusion.jpg"
-);
+// const ambientOcclusionTexture = textureLoader.load(
+//   "/textures/door/ambientOcclusion.jpg",
+//   () => {
+//     console.log("load");
+//   },
+//   () => {
+//     console.log("progress");
+//   },
+//   () => {
+//     console.log("error");
+//   }
+// );
 
-ambientOcclusionTexture.colorSpace = THREE.SRGBColorSpace;
+// ambientOcclusionTexture.colorSpace = THREE.SRGBColorSpace;
 
-const metalTexture = textureLoader.load("/textures/door/metalness.jpg");
-metalTexture.colorSpace = THREE.SRGBColorSpace;
+// const metalTexture = textureLoader.load(
+//   "/textures/door/metalness.jpg",
+//   () => {
+//     console.log("load");
+//   },
+//   () => {
+//     console.log("progress");
+//   },
+//   () => {
+//     console.log("error");
+//   }
+// );
+// metalTexture.colorSpace = THREE.SRGBColorSpace;
 
-const roughnessTexture = textureLoader.load("/textures/door/roughness.jpg");
-roughnessTexture.colorSpace = THREE.SRGBColorSpace;
+// const roughnessTexture = textureLoader.load(
+//   "/textures/door/roughness.jpg",
+//   () => {
+//     console.log("load");
+//   },
+//   () => {
+//     console.log("progress");
+//   },
+//   () => {
+//     console.log("error");
+//   }
+// );
+// roughnessTexture.colorSpace = THREE.SRGBColorSpace;
 /**
  * Base
  */
