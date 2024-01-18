@@ -69,6 +69,12 @@ colorTexture.wrapT = THREE.MirroredRepeatWrapping;
 colorTexture.offset.x = 0.5;
 colorTexture.offset.y = 0.5;
 
+/**
+ * Rotate Property
+ */
+
+colorTexture.rotation = Math.PI * 0.25;
+
 // const alphaTexture = textureLoader.load(
 //   "/textures/door/alpha.jpg",
 //   () => {
