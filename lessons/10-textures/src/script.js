@@ -56,6 +56,9 @@ colorTexture.colorSpace = THREE.SRGBColorSpace;
 colorTexture.repeat.x = 2;
 colorTexture.repeat.y = 3;
 
+colorTexture.wrapS = THREE.RepeatWrapping;
+colorTexture.wrapT = THREE.RepeatWrapping;
+
 // const alphaTexture = textureLoader.load(
 //   "/textures/door/alpha.jpg",
 //   () => {
