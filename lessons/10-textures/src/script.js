@@ -36,7 +36,7 @@ loadManager.onError = () => {
 loadManager.on;
 const textureLoader = new THREE.TextureLoader(loadManager);
 const colorTexture = textureLoader.load(
-  "/textures/door/color.jpg",
+  "/textures/checkerboard-1024x1024.png",
   () => {
     console.log("load");
   },
@@ -59,8 +59,8 @@ colorTexture.colorSpace = THREE.SRGBColorSpace;
 // colorTexture.wrapS = THREE.RepeatWrapping;
 // colorTexture.wrapT = THREE.RepeatWrapping;
 
-colorTexture.wrapS = THREE.MirroredRepeatWrapping;
-colorTexture.wrapT = THREE.MirroredRepeatWrapping;
+// colorTexture.wrapS = THREE.MirroredRepeatWrapping;
+// colorTexture.wrapT = THREE.MirroredRepeatWrapping;
 
 /**
  * Offset Property
@@ -73,10 +73,12 @@ colorTexture.wrapT = THREE.MirroredRepeatWrapping;
  * Rotate Property
  */
 
-colorTexture.rotation = Math.PI * 0.25;
+// colorTexture.rotation = Math.PI * 0.25;
 
-colorTexture.center.x = 0.5;
-colorTexture.center.y = 0.5;
+// colorTexture.center.x = 0.5;
+// colorTexture.center.y = 0.5;
+
+colorTexture.minFilter = THREE.NearestFilter;
 
 // const alphaTexture = textureLoader.load(
 //   "/textures/door/alpha.jpg",
