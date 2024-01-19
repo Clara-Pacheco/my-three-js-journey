@@ -36,7 +36,7 @@ loadManager.onError = () => {
 loadManager.on;
 const textureLoader = new THREE.TextureLoader(loadManager);
 const colorTexture = textureLoader.load(
-  "/textures/minecraft.png",
+  "/textures/door/color.jpg",
   () => {
     console.log("load");
   },
