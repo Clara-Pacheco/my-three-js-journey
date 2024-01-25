@@ -72,7 +72,8 @@ const TorusGeometry = new THREE.TorusGeometry(0.3, 0.2, 16, 32);
 // });
 
 const material = new THREE.MeshNormalMaterial({
-  wireframe: true,
+  // wireframe: true,
+  flatShading: true,
 });
 
 // Create the 3 objects(meshs)
