@@ -66,7 +66,8 @@ const material = new THREE.MeshBasicMaterial({
   //   color: "red",
   //   wireframe: true,
   transparent: true,
-  opacity: 0.5,
+  alphaMap: alphaTexture,
+  //   opacity: 0.5,
 });
 
 // Create the 3 objects(meshs)
