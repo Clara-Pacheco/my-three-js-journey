@@ -61,13 +61,18 @@ const TorusGeometry = new THREE.TorusGeometry(0.3, 0.2, 16, 32);
 
 // Create the MeshBasicMaterial
 
-const material = new THREE.MeshBasicMaterial({
-  //   map: doorColorTexture,
-  //   color: "red",
-  //   wireframe: true,
-  transparent: true,
-  alphaMap: alphaTexture,
-  //   opacity: 0.5,
+// const material = new THREE.MeshBasicMaterial({
+//   side: THREE.DoubleSide,
+//   map: doorColorTexture,
+//   color: "red",
+//   wireframe: true,
+//   transparent: true,
+//   alphaMap: alphaTexture,
+//   opacity: 0.5,
+// });
+
+const material = new THREE.MeshNormalMaterial({
+  wireframe: true,
 });
 
 // Create the 3 objects(meshs)
