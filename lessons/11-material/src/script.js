@@ -12,6 +12,8 @@ const scene = new THREE.Scene();
 
 // Loading textures
 
+// Door textures
+
 const textureLoader = new THREE.TextureLoader();
 const doorColorTexture = textureLoader.load("../textures/door/color.jpg");
 const alphaTexture = textureLoader.load("../textures/door/alpha.jpg");
@@ -22,6 +24,11 @@ const doorHeightTexture = textureLoader.load("../textures/door/height.jpg");
 const metalnessTexture = textureLoader.load("../textures/door/metalness.jpg");
 const doorNormalTexture = textureLoader.load("../textures/door/normal.jpg");
 const roughnessTexture = textureLoader.load("../textures/door/roughness.jpg");
+
+// Matcaps textures
+
+const matcap1Texture = textureLoader.load("../textures/matcaps/1.png");
+
 /**
  * Sizes
  */
