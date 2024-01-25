@@ -18,10 +18,10 @@ const alphaTexture = textureLoader.load("../textures/door/alpha.jpg");
 const ambientOcclusionTexture = textureLoader.load(
   "../textures/door/ambientOcclusion.jpg"
 );
-const doorHeightTexture = textureLoader.load("..textures/door/height.jpg");
-const metalnessTexture = textureLoader.load("..textures/door/metalness.jpg");
+const doorHeightTexture = textureLoader.load("../textures/door/height.jpg");
+const metalnessTexture = textureLoader.load("../textures/door/metalness.jpg");
 const doorNormalTexture = textureLoader.load("../textures/door/normal.jpg");
-const roughnessTexture = textureLoader.load("..textures/door/roughness.jpg");
+const roughnessTexture = textureLoader.load("../textures/door/roughness.jpg");
 /**
  * Sizes
  */
