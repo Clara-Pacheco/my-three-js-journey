@@ -21,13 +21,19 @@ const sizes = {
 /**
  * Mesh
  */
+// Create the three geometries
 
-const SphereGeometry = new THREE.SphereGeometry(1, 32, 16);
-const PlaneGeometry = new THREE.PlaneGeometry(1, 1, 1);
-const TorusGeometry = new THREE.TorusGeometry(1);
+const SphereGeometry = new THREE.SphereGeometry(0.5, 16, 16);
+const PlaneGeometry = new THREE.PlaneGeometry(1, 1);
+const TorusGeometry = new THREE.TorusGeometry(0.3, 0.2, 16, 32);
+
+// Create the MeshBasicMaterial
+
 const material = new THREE.MeshBasicMaterial({
   color: 0xff0000,
 });
+
+// Create the 3 objects(meshs)
 
 const mesh1 = new THREE.Mesh(SphereGeometry, material);
 mesh1.position.x = -2;
@@ -35,6 +41,9 @@ const mesh2 = new THREE.Mesh(PlaneGeometry, material);
 const mesh3 = new THREE.Mesh(TorusGeometry, material);
 mesh3.position.x = 2;
 
+// Add the 3 objects to the scene
+// scene.add(mesh1, mesh2, mesh3);
+// or
 scene.add(mesh1);
 scene.add(mesh2);
 scene.add(mesh3);
