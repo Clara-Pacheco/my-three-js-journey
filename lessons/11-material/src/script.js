@@ -16,6 +16,11 @@ const scene = new THREE.Scene();
 
 const textureLoader = new THREE.TextureLoader();
 const doorColorTexture = textureLoader.load("../textures/door/color.jpg");
+
+// Encode in SRGB (used as map)
+
+doorColorTexture.colorSpace = THREE.SRGBColorSpace;
+
 const alphaTexture = textureLoader.load("../textures/door/alpha.jpg");
 const ambientOcclusionTexture = textureLoader.load(
   "../textures/door/ambientOcclusion.jpg"
@@ -28,6 +33,10 @@ const roughnessTexture = textureLoader.load("../textures/door/roughness.jpg");
 // Matcaps textures
 
 const matcap1Texture = textureLoader.load("../textures/matcaps/1.png");
+
+// Encode in SRGB (used as matcap)
+
+matcap1Texture.colorSpace = THREE.SRGBColorSpace;
 
 // Gradient textures
 
