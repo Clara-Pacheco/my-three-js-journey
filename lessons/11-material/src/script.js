@@ -29,6 +29,10 @@ const roughnessTexture = textureLoader.load("../textures/door/roughness.jpg");
 
 const matcap1Texture = textureLoader.load("../textures/matcaps/1.png");
 
+// Gradient textures
+
+const gradientTexture = textureLoader.load("../textures/gradients/3.jpg");
+
 /**
  * Sizes
  */
