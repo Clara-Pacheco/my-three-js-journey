@@ -98,6 +98,12 @@ const clock = new THREE.Clock();
 const tick = () => {
   const elapsedTime = clock.getElapsedTime();
 
+  // Update objects by rotating them
+
+  mesh1.rotation.y = 0.1 * elapsedTime;
+  mesh2.rotation.y = 0.1 * elapsedTime;
+  mesh3.rotation.y = 0.1 * elapsedTime;
+
   // Update controls
   controls.update();
 
