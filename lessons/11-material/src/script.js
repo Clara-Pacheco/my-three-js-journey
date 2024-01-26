@@ -71,10 +71,14 @@ const TorusGeometry = new THREE.TorusGeometry(0.3, 0.2, 16, 32);
 //   opacity: 0.5,
 // });
 
-const material = new THREE.MeshNormalMaterial({
-  // wireframe: true,
-  flatShading: true,
-});
+// Create a MeshNormalMaterial
+
+// const material = new THREE.MeshNormalMaterial({
+//   wireframe: true,
+//   flatShading: true,
+// });
+
+// Create a MeshMatcapMaterial
 
 // Create the 3 objects(meshs)
 
