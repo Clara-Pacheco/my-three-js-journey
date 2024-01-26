@@ -112,9 +112,19 @@ scene.add(pointLight);
 
 // Create a MeshPhongMaterial
 
-const material = new THREE.MeshPhongMaterial({
-  shininess: 100,
-  specular: new THREE.Color(0x1188ff),
+// const material = new THREE.MeshPhongMaterial({
+//   shininess: 100,
+//   specular: new THREE.Color(0x1188ff),
+// });
+
+// Create a MeshToonMaterial
+
+gradientTexture.minFilter = THREE.NearestFilter;
+gradientTexture.magFilter = THREE.NearestFilter;
+gradientTexture.generateMipmaps = false;
+
+const material = new THREE.MeshToonMaterial({
+  gradientMap: gradientTexture,
 });
 
 // Create the 3 objects(meshs)
