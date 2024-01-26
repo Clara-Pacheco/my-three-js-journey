@@ -80,6 +80,10 @@ const TorusGeometry = new THREE.TorusGeometry(0.3, 0.2, 16, 32);
 
 // Create a MeshMatcapMaterial
 
+const material = new THREE.MeshMatcapMaterial({
+  matcap: matcap1Texture,
+});
+
 // Create the 3 objects(meshs)
 
 const mesh1 = new THREE.Mesh(SphereGeometry, material);
