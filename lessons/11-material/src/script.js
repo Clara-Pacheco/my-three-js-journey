@@ -88,7 +88,12 @@ const rgbeLoader = new RGBELoader();
 
 // Use its load() method to load the enviorment texture
 
-rgbeLoader.load("../textures/environmentMap/2k.hdr");
+rgbeLoader.load("../textures/environmentMap/2k.hdr", (environmentMap) => {
+  environmentMap.mapping = THREE.EquirectangularReflectionMapping;
+
+  scene.background = environmentMap;
+  scene.environment = environmentMap;
+});
 
 // Create the MeshBasicMaterial
 
