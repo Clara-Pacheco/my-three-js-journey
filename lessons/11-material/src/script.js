@@ -93,7 +93,11 @@ const TorusGeometry = new THREE.TorusGeometry(0.3, 0.2, 16, 32);
 
 // Create a MeshDepthMaterial
 
-const material = new THREE.MeshDepthMaterial();
+// const material = new THREE.MeshDepthMaterial();
+
+// Create a MeshLambertMaterial
+
+const material = new THREE.MeshLambertMaterial();
 
 // Create the 3 objects(meshs)
 
