@@ -66,6 +66,11 @@ const SphereGeometry = new THREE.SphereGeometry(0.5, 16, 16);
 const PlaneGeometry = new THREE.PlaneGeometry(1, 1);
 const TorusGeometry = new THREE.TorusGeometry(0.3, 0.2, 16, 32);
 
+// Create lights and add them to the scene
+
+const ambientLight = new THREE.AmbientLight(0xffffff, 1);
+scene.add(ambientLight);
+
 // Create the MeshBasicMaterial
 
 // const material = new THREE.MeshBasicMaterial({
