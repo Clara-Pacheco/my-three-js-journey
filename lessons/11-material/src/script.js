@@ -80,6 +80,16 @@ pointLight.position.y = 3;
 pointLight.position.x = 4;
 scene.add(pointLight);
 
+// Enviorment Map
+
+// Instantiate a rgbeLoader
+
+const rgbeLoader = new RGBELoader();
+
+// Use its load() method to load the enviorment texture
+
+rgbeLoader.load("../textures/environmentMap/2k.hdr");
+
 // Create the MeshBasicMaterial
 
 // const material = new THREE.MeshBasicMaterial({
