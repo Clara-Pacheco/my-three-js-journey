@@ -131,7 +131,10 @@ scene.add(pointLight);
 
 // Create a MeshStandardMaterial
 
-const material = new THREE.MeshStandardMaterial();
+const material = new THREE.MeshStandardMaterial({
+  metalness: 0.45,
+  roughness: 0.65,
+});
 
 // Create the 3 objects(meshs)
 
