@@ -119,13 +119,17 @@ scene.add(pointLight);
 
 // Create a MeshToonMaterial
 
-gradientTexture.minFilter = THREE.NearestFilter;
-gradientTexture.magFilter = THREE.NearestFilter;
-gradientTexture.generateMipmaps = false;
+// gradientTexture.minFilter = THREE.NearestFilter;
+// gradientTexture.magFilter = THREE.NearestFilter;
+// gradientTexture.generateMipmaps = false;
 
-const material = new THREE.MeshToonMaterial({
-  gradientMap: gradientTexture,
-});
+// const material = new THREE.MeshToonMaterial({
+//   gradientMap: gradientTexture,
+// });
+
+// Create a MeshStandardMaterial
+
+const material = new THREE.MeshStandardMaterial();
 
 // Create the 3 objects(meshs)
 
