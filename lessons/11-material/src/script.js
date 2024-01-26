@@ -71,6 +71,12 @@ const TorusGeometry = new THREE.TorusGeometry(0.3, 0.2, 16, 32);
 const ambientLight = new THREE.AmbientLight(0xffffff, 1);
 scene.add(ambientLight);
 
+const pointLight = new THREE.PointLight(0xffffff, 30);
+pointLight.position.x = 2;
+pointLight.position.y = 3;
+pointLight.position.x = 4;
+scene.add(pointLight);
+
 // Create the MeshBasicMaterial
 
 // const material = new THREE.MeshBasicMaterial({
