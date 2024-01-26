@@ -87,9 +87,13 @@ const TorusGeometry = new THREE.TorusGeometry(0.3, 0.2, 16, 32);
 
 // Create a MeshMatcapMaterial
 
-const material = new THREE.MeshMatcapMaterial({
-  matcap: matcap8Texture,
-});
+// const material = new THREE.MeshMatcapMaterial({
+//   matcap: matcap8Texture,
+// });
+
+// Create a MeshDepthMaterial
+
+const material = new THREE.MeshDepthMaterial();
 
 // Create the 3 objects(meshs)
 
