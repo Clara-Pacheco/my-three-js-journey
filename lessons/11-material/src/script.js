@@ -108,7 +108,14 @@ scene.add(pointLight);
 
 // Create a MeshLambertMaterial
 
-const material = new THREE.MeshLambertMaterial();
+// const material = new THREE.MeshLambertMaterial();
+
+// Create a MeshPhongMaterial
+
+const material = new THREE.MeshPhongMaterial({
+  shininess: 100,
+  specular: new THREE.Color(0x1188ff),
+});
 
 // Create the 3 objects(meshs)
 
