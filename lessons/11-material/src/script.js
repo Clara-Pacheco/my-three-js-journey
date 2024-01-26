@@ -33,6 +33,13 @@ const roughnessTexture = textureLoader.load("../textures/door/roughness.jpg");
 // Matcaps textures
 
 const matcap1Texture = textureLoader.load("../textures/matcaps/1.png");
+const matcap2Texture = textureLoader.load("../textures/matcaps/2.png");
+const matcap3Texture = textureLoader.load("../textures/matcaps/3.png");
+const matcap4Texture = textureLoader.load("../textures/matcaps/4.png");
+const matcap5Texture = textureLoader.load("../textures/matcaps/5.png");
+const matcap6Texture = textureLoader.load("../textures/matcaps/6.png");
+const matcap7Texture = textureLoader.load("../textures/matcaps/7.png");
+const matcap8Texture = textureLoader.load("../textures/matcaps/8.png");
 
 // Encode in SRGB (used as matcap)
 
