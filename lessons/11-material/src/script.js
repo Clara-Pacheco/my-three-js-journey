@@ -170,7 +170,7 @@ gui.add(material, "roughness").min(0).max(1).step(0.0001);
 
 // Create a MeshPhysicalMaterial
 
-const material2 = new THREE.MeshStandardMaterial({
+const material2 = new THREE.MeshPhysicalMaterial({
   metalness: 1,
   roughness: 1,
   map: doorColorTexture,
@@ -183,10 +183,12 @@ const material2 = new THREE.MeshStandardMaterial({
   normalMap: doorNormalTexture,
   // alphaMap: alphaTexture,
   // transparent: true,
+  clearcoat: 1,
+  clearcoatRoughness: 0,
 });
 
-gui.add(material, "metalness").min(0).max(1).step(0.0001);
-gui.add(material, "roughness").min(0).max(1).step(0.0001);
+gui.add(material2, "clearcoat").min(0).max(1).step(0.0001);
+gui.add(material2, "clearcoatRoughness").min(0).max(1).step(0.0001);
 
 // Create the 3 objects(meshs)
 
