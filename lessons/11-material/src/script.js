@@ -150,19 +150,22 @@ rgbeLoader.load("../textures/environmentMap/2k.hdr", (environmentMap) => {
 
 // Create a MeshStandardMaterial
 
-const material = new THREE.MeshStandardMaterial({
-  metalness: 1,
-  roughness: 1,
-  map: doorColorTexture,
-  aoMap: ambientOcclusionTexture,
-  aoMapIntensity: 1,
+const material = new THREE.MeshPhysicalMaterial({
+  metalness: 0,
+  roughness: 0,
+  // map: doorColorTexture,
+  // aoMap: ambientOcclusionTexture,
+  // aoMapIntensity: 1,
   // displacementMap: doorHeightTexture,
   // displacementScale: 0.1,
-  metalnessMap: metalnessTexture,
-  roughnessMap: roughnessTexture,
-  normalMap: doorNormalTexture,
+  // metalnessMap: metalnessTexture,
+  // roughnessMap: roughnessTexture,
+  // normalMap: doorNormalTexture,
   // alphaMap: alphaTexture,
   // transparent: true,
+  transmission: 1,
+  ior: 1.5,
+  thickness: 0.5,
 });
 
 gui.add(material, "metalness").min(0).max(1).step(0.0001);
@@ -171,16 +174,16 @@ gui.add(material, "roughness").min(0).max(1).step(0.0001);
 // Create a MeshPhysicalMaterial
 
 const material2 = new THREE.MeshPhysicalMaterial({
-  metalness: 1,
-  roughness: 1,
-  map: doorColorTexture,
-  aoMap: ambientOcclusionTexture,
-  aoMapIntensity: 1,
+  metalness: 0,
+  roughness: 0,
+  // map: doorColorTexture,
+  // aoMap: ambientOcclusionTexture,
+  // aoMapIntensity: 1,
   // displacementMap: doorHeightTexture,
   // displacementScale: 0.1,
-  metalnessMap: metalnessTexture,
-  roughnessMap: roughnessTexture,
-  normalMap: doorNormalTexture,
+  // metalnessMap: metalnessTexture,
+  // roughnessMap: roughnessTexture,
+  // normalMap: doorNormalTexture,
   // alphaMap: alphaTexture,
   // transparent: true,
   // clearcoat: 1,
