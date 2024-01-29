@@ -183,12 +183,19 @@ const material2 = new THREE.MeshPhysicalMaterial({
   normalMap: doorNormalTexture,
   // alphaMap: alphaTexture,
   // transparent: true,
-  clearcoat: 1,
-  clearcoatRoughness: 0,
+  // clearcoat: 1,
+  // clearcoatRoughness: 0,
+  sheen: 1,
+  sheenRoughness: 0.25,
 });
 
-gui.add(material2, "clearcoat").min(0).max(1).step(0.0001);
-gui.add(material2, "clearcoatRoughness").min(0).max(1).step(0.0001);
+material2.sheenColor.set(1, 1, 1);
+
+// gui.add(material2, "clearcoat").min(0).max(1).step(0.0001);
+// gui.add(material2, "clearcoatRoughness").min(0).max(1).step(0.0001);
+gui.add(material2, "sheen").min(0).max(1).step(0.0001);
+gui.add(material2, "sheenRoughness").min(0).max(1).step(0.0001);
+gui.addColor(material2, "sheenColor");
 
 // Create the 3 objects(meshs)
 
