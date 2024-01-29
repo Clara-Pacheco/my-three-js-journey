@@ -152,6 +152,7 @@ const material = new THREE.MeshStandardMaterial({
   roughness: 0.65,
   map: doorColorTexture,
   aoMap: ambientOcclusionTexture,
+  aoMapIntensity: 1,
 });
 
 gui.add(material, "metalness").min(0).max(1).step(0.0001);
