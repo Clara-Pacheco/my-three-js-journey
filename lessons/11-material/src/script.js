@@ -153,13 +153,33 @@ const material = new THREE.MeshStandardMaterial({
   map: doorColorTexture,
   aoMap: ambientOcclusionTexture,
   aoMapIntensity: 1,
-  displacementMap: doorHeightTexture,
-  displacementScale: 0.1,
+  // displacementMap: doorHeightTexture,
+  // displacementScale: 0.1,
   metalnessMap: metalnessTexture,
   roughnessMap: roughnessTexture,
   normalMap: doorNormalTexture,
-  alphaMap: alphaTexture,
-  transparent: true,
+  // alphaMap: alphaTexture,
+  // transparent: true,
+});
+
+gui.add(material, "metalness").min(0).max(1).step(0.0001);
+gui.add(material, "roughness").min(0).max(1).step(0.0001);
+
+// Create a MeshPhysicalMaterial
+
+const material2 = new THREE.MeshStandardMaterial({
+  metalness: 1,
+  roughness: 1,
+  map: doorColorTexture,
+  aoMap: ambientOcclusionTexture,
+  aoMapIntensity: 1,
+  // displacementMap: doorHeightTexture,
+  // displacementScale: 0.1,
+  metalnessMap: metalnessTexture,
+  roughnessMap: roughnessTexture,
+  normalMap: doorNormalTexture,
+  // alphaMap: alphaTexture,
+  // transparent: true,
 });
 
 gui.add(material, "metalness").min(0).max(1).step(0.0001);
@@ -173,12 +193,22 @@ const mesh2 = new THREE.Mesh(PlaneGeometry, material);
 const mesh3 = new THREE.Mesh(TorusGeometry, material);
 mesh3.position.x = 2;
 
+const mesh4 = new THREE.Mesh(SphereGeometry, material2);
+mesh4.position.x = -4;
+const mesh5 = new THREE.Mesh(PlaneGeometry, material2);
+mesh5.position.x = 4;
+const mesh6 = new THREE.Mesh(TorusGeometry, material2);
+mesh6.position.x = 6;
+
 // Add the 3 objects to the scene
 // scene.add(mesh1, mesh2, mesh3);
 // or
 scene.add(mesh1);
 scene.add(mesh2);
 scene.add(mesh3);
+scene.add(mesh4);
+scene.add(mesh5);
+scene.add(mesh6);
 
 window.addEventListener("resize", () => {
   // Update sizes
