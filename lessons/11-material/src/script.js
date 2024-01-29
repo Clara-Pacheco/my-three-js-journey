@@ -148,12 +148,16 @@ rgbeLoader.load("../textures/environmentMap/2k.hdr", (environmentMap) => {
 // Create a MeshStandardMaterial
 
 const material = new THREE.MeshStandardMaterial({
-  metalness: 0.45,
-  roughness: 0.65,
+  metalness: 1,
+  roughness: 1,
   map: doorColorTexture,
   aoMap: ambientOcclusionTexture,
   aoMapIntensity: 1,
   displacementMap: doorHeightTexture,
+  displacementScale: 0.1,
+  metalnessMap: metalnessTexture,
+  roughnessMap: roughnessTexture,
+  normalMap: doorNormalTexture,
 });
 
 gui.add(material, "metalness").min(0).max(1).step(0.0001);
