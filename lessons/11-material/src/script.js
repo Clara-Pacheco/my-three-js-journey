@@ -68,6 +68,9 @@ const sizes = {
 const SphereGeometry = new THREE.SphereGeometry(0.5, 64, 64);
 const PlaneGeometry = new THREE.PlaneGeometry(1, 1, 100, 100);
 const TorusGeometry = new THREE.TorusGeometry(0.3, 0.2, 64, 128);
+const TorusKnotGeometry = new THREE.TorusKnotGeometry(10, 3, 100, 16);
+const ConeGeometry = new THREE.ConeGeometry(1, 2, 4);
+const IcosahedronGeometry = new THREE.IcosahedronGeometry(1, 0);
 
 // Create lights and add them to the scene
 
@@ -193,12 +196,12 @@ const mesh2 = new THREE.Mesh(PlaneGeometry, material);
 const mesh3 = new THREE.Mesh(TorusGeometry, material);
 mesh3.position.x = 2;
 
-const mesh4 = new THREE.Mesh(SphereGeometry, material2);
-mesh4.position.x = -4;
-const mesh5 = new THREE.Mesh(PlaneGeometry, material2);
-mesh5.position.x = 4;
-const mesh6 = new THREE.Mesh(TorusGeometry, material2);
-mesh6.position.x = 6;
+const mesh4 = new THREE.Mesh(TorusKnotGeometry, material2);
+mesh4.position.x = -30;
+const mesh5 = new THREE.Mesh(ConeGeometry, material2);
+mesh5.position.x = 6;
+const mesh6 = new THREE.Mesh(IcosahedronGeometry, material2);
+mesh6.position.x = 10;
 
 // Add the 3 objects to the scene
 // scene.add(mesh1, mesh2, mesh3);
@@ -265,12 +268,18 @@ const tick = () => {
   mesh1.rotation.y = 0.1 * elapsedTime;
   mesh2.rotation.y = 0.1 * elapsedTime;
   mesh3.rotation.y = 0.1 * elapsedTime;
+  mesh4.rotation.y = 0.1 * elapsedTime;
+  mesh5.rotation.y = 0.1 * elapsedTime;
+  mesh6.rotation.y = 0.1 * elapsedTime;
 
   // Update the objects by rotatring them on the 'x' axis
 
   mesh1.rotation.x = -0.15 * elapsedTime;
   mesh2.rotation.x = -0.15 * elapsedTime;
   mesh3.rotation.x = -0.15 * elapsedTime;
+  mesh4.rotation.x = -0.15 * elapsedTime;
+  mesh5.rotation.x = -0.15 * elapsedTime;
+  mesh6.rotation.x = -0.15 * elapsedTime;
 
   // Update controls
   controls.update();
