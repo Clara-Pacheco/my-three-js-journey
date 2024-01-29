@@ -158,6 +158,8 @@ const material = new THREE.MeshStandardMaterial({
   metalnessMap: metalnessTexture,
   roughnessMap: roughnessTexture,
   normalMap: doorNormalTexture,
+  alphaMap: alphaTexture,
+  transparent: true,
 });
 
 gui.add(material, "metalness").min(0).max(1).step(0.0001);
