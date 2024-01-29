@@ -187,9 +187,12 @@ const material2 = new THREE.MeshPhysicalMaterial({
   // clearcoatRoughness: 0,
   // sheen: 1,
   // sheenRoughness: 0.25,
-  iridescence: 1,
-  iridescenceIOR: 1,
-  iridescenceThicknessRange: [100, 800],
+  // iridescence: 1,
+  // iridescenceIOR: 1,
+  // iridescenceThicknessRange: [100, 800],
+  transmission: 1,
+  ior: 1.5,
+  thickness: 0.5,
 });
 
 material2.sheenColor.set(1, 1, 1);
@@ -199,10 +202,13 @@ material2.sheenColor.set(1, 1, 1);
 // gui.add(material2, "sheen").min(0).max(1).step(0.0001);
 // gui.add(material2, "sheenRoughness").min(0).max(1).step(0.0001);
 // gui.addColor(material2, "sheenColor");
-gui.add(material2, "iridescence").min(0).max(1).step(0.0001);
-gui.add(material2, "iridescenceIOR").min(1).max(2.333).step(0.0001);
-gui.add(material2.iridescenceThicknessRange, "0").min(1).max(1000).step(1);
-gui.add(material2.iridescenceThicknessRange, "1").min(1).max(1000).step(1);
+// gui.add(material2, "iridescence").min(0).max(1).step(0.0001);
+// gui.add(material2, "iridescenceIOR").min(1).max(2.333).step(0.0001);
+// gui.add(material2.iridescenceThicknessRange, "0").min(1).max(1000).step(1);
+// gui.add(material2.iridescenceThicknessRange, "1").min(1).max(1000).step(1);
+gui.add(material2, "transmission").min(0).max(1).step(0.0001);
+gui.add(material2, "ior").min(1).max(10).step(0.0001);
+gui.add(material2, "thickness").min(0).max(1).step(0.001);
 
 // Create the 3 objects(meshs)
 
