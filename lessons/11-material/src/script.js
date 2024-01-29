@@ -65,9 +65,9 @@ const sizes = {
  */
 // Create the three geometries
 
-const SphereGeometry = new THREE.SphereGeometry(0.5, 16, 16);
-const PlaneGeometry = new THREE.PlaneGeometry(1, 1);
-const TorusGeometry = new THREE.TorusGeometry(0.3, 0.2, 16, 32);
+const SphereGeometry = new THREE.SphereGeometry(0.5, 64, 64);
+const PlaneGeometry = new THREE.PlaneGeometry(1, 1, 100, 100);
+const TorusGeometry = new THREE.TorusGeometry(0.3, 0.2, 64, 128);
 
 // Create lights and add them to the scene
 
@@ -153,6 +153,7 @@ const material = new THREE.MeshStandardMaterial({
   map: doorColorTexture,
   aoMap: ambientOcclusionTexture,
   aoMapIntensity: 1,
+  displacementMap: doorHeightTexture,
 });
 
 gui.add(material, "metalness").min(0).max(1).step(0.0001);
