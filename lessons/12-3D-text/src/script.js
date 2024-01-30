@@ -45,13 +45,13 @@ fontLoader.load("/fonts/helvetiker_regular.typeface.json", (font) => {
 
 /**
  * Object
- */
-const cube = new THREE.Mesh(
-  new THREE.BoxGeometry(1, 1, 1),
-  new THREE.MeshBasicMaterial()
-);
+//  */
+// const cube = new THREE.Mesh(
+//   new THREE.BoxGeometry(1, 1, 1),
+//   new THREE.MeshBasicMaterial()
+// );
 
-scene.add(cube);
+// scene.add(cube);
 
 /**
  * Sizes
