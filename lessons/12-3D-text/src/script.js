@@ -40,6 +40,7 @@ fontLoader.load("/fonts/helvetiker_regular.typeface.json", (font) => {
 
   const textMaterial = new THREE.MeshBasicMaterial();
   const text = new THREE.Mesh(textGeometry, textMaterial);
+  scene.add(text);
 });
 
 /**
