@@ -38,7 +38,8 @@ fontLoader.load("/fonts/helvetiker_regular.typeface.json", (font) => {
     bevelSegments: 5,
   });
 
-  const material = new THREE.MeshBasicMaterial();
+  const textMaterial = new THREE.MeshBasicMaterial();
+  const text = new THREE.Mesh(textGeometry, textMaterial);
 });
 
 /**
