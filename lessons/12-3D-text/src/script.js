@@ -113,6 +113,11 @@ fontLoader.load("/fonts/helvetiker_regular.typeface.json", (font) => {
     donut.rotation.x = Math.random() * Math.PI;
     donut.rotation.y = Math.random() * Math.PI;
 
+    // Alter their scale
+
+    const scale = Math.random();
+    donut.scale.set(scale, scale, scale);
+
     scene.add(donut);
   }
 });
