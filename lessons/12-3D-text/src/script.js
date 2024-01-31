@@ -102,9 +102,16 @@ fontLoader.load("/fonts/helvetiker_regular.typeface.json", (font) => {
 
     const donut = new THREE.Mesh(donutGeometry, donutMaterial);
 
+    // Alter thei position
+
     donut.position.x = (Math.random() - 0.5) * 10;
     donut.position.y = (Math.random() - 0.5) * 10;
     donut.position.z = (Math.random() - 0.5) * 10;
+
+    // Alter their rotation
+
+    donut.rotation.x = Math.random() * Math.PI;
+    donut.rotation.y = Math.random() * Math.PI;
 
     scene.add(donut);
   }
