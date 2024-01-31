@@ -89,22 +89,21 @@ fontLoader.load("/fonts/helvetiker_regular.typeface.json", (font) => {
 
   console.time("donuts");
 
+  // Create the donut geometry
+
+  const donutGeometry = new THREE.TorusGeometry(0.3, 0.2, 20, 45);
+
+  // Create the donut material
+
+  const donutMaterial = new THREE.MeshMatcapMaterial({
+    matcap: matcapTexture3,
+  });
   for (let i = 0; i < 100; i++) {
-    // Create the donut geometry
-
-    const donutGeometry = new THREE.TorusGeometry(0.3, 0.2, 20, 45);
-
-    // Create the donut material
-
-    const donutMaterial = new THREE.MeshMatcapMaterial({
-      matcap: matcapTexture3,
-    });
-
     // Create the object donut
 
     const donut = new THREE.Mesh(donutGeometry, donutMaterial);
 
-    // Alter thei position
+    // Alter their position
 
     donut.position.x = (Math.random() - 0.5) * 10;
     donut.position.y = (Math.random() - 0.5) * 10;
