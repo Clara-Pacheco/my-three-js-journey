@@ -26,8 +26,30 @@ const scene = new THREE.Scene();
  * Textures
  */
 const textureLoader = new THREE.TextureLoader();
-const matcapTexture = textureLoader.load("../textures/matcaps/1.png");
-matcapTexture.colorSpace = THREE.SRGBColorSpace;
+
+const matcapTexture1 = textureLoader.load("../textures/matcaps/1.png");
+matcapTexture1.colorSpace = THREE.SRGBColorSpace;
+
+const matcapTexture2 = textureLoader.load("../textures/matcaps/2.png");
+matcapTexture2.colorSpace = THREE.SRGBColorSpace;
+
+const matcapTexture3 = textureLoader.load("../textures/matcaps/3.png");
+matcapTexture3.colorSpace = THREE.SRGBColorSpace;
+
+const matcapTexture4 = textureLoader.load("../textures/matcaps/4.png");
+matcapTexture4.colorSpace = THREE.SRGBColorSpace;
+
+const matcapTexture5 = textureLoader.load("../textures/matcaps/5.png");
+matcapTexture5.colorSpace = THREE.SRGBColorSpace;
+
+const matcapTexture6 = textureLoader.load("../textures/matcaps/6.png");
+matcapTexture6.colorSpace = THREE.SRGBColorSpace;
+
+const matcapTexture7 = textureLoader.load("../textures/matcaps/7.png");
+matcapTexture7.colorSpace = THREE.SRGBColorSpace;
+
+const matcapTexture8 = textureLoader.load("../textures/matcaps/8.png");
+matcapTexture8.colorSpace = THREE.SRGBColorSpace;
 
 // console.log(matcapTexture);
 
@@ -59,7 +81,7 @@ fontLoader.load("/fonts/helvetiker_regular.typeface.json", (font) => {
 
   textGeometry.center();
   const textMaterial = new THREE.MeshMatcapMaterial({
-    matcap: matcapTexture,
+    matcap: matcapTexture3,
   });
   //   textMaterial.wireframe = true;
   const text = new THREE.Mesh(textGeometry, textMaterial);
