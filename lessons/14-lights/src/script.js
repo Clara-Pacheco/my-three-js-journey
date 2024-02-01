@@ -34,6 +34,8 @@ scene.add(directionaLight);
 
 gui.add(ambientLight, "intensity").min(0).max(3).step(0.01);
 
+directionaLight.position.set(1, 0.25, 0);
+
 /**
  * Objects
  */
