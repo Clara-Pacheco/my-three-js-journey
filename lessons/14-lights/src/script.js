@@ -18,6 +18,12 @@ const scene = new THREE.Scene();
  * Lights
  */
 
+const ambientLight = new THREE.AmbientLight({
+  color: 0xffffff,
+  intensity: 1,
+});
+
+scene.add(ambientLight);
 /**
  * Objects
  */
