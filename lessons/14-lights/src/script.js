@@ -45,6 +45,11 @@ directionaLight.position.set(1, 0.25, 0);
 const hemisphereLight = new THREE.HemisphereLight(0xff0000, 0x0000ff, 1);
 scene.add(hemisphereLight);
 
+// PointLight
+
+const pointLight = new THREE.PointLight(0xff9000, 1.5);
+scene.add(pointLight);
+
 /**
  * Objects
  */
