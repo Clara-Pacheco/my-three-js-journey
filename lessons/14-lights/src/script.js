@@ -65,6 +65,9 @@ const spotLight = new THREE.SpotLight(0x78ff00, 4.5, 10, Math.PI, 0.25, 1);
 spotLight.position.set(0, 2, 3);
 scene.add(spotLight);
 
+scene.add(spotLight.target);
+spotLight.target.position.x = -0.75;
+
 /**
  * Objects
  */
