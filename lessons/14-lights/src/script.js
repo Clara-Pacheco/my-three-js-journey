@@ -49,6 +49,7 @@ scene.add(hemisphereLight);
 
 const pointLight = new THREE.PointLight(0xff9000, 1.5);
 scene.add(pointLight);
+pointLight.position.set(1, -0.5, 1);
 
 /**
  * Objects
