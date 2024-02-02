@@ -59,6 +59,12 @@ scene.add(rectAreaLight);
 rectAreaLight.position.set(-1.5, 0, 1.5);
 rectAreaLight.lookAt(new THREE.Vector3());
 
+// SpotLight
+
+const spotLight = new THREE.SpotLight(0x78ff00, 4.5, 10, Math.PI, 0.25, 1);
+spotLight.position.set(0, 2, 3);
+scene.add(spotLight);
+
 /**
  * Objects
  */
