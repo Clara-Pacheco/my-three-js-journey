@@ -76,6 +76,12 @@ const hemisphereLightHelper = new THREE.HemisphereLightHelper(
 );
 scene.add(hemisphereLight);
 
+const directionaLightHelper = new THREE.DirectionalLightHelper(
+  directionaLight,
+  0.2
+);
+scene.add(directionaLight);
+
 /**
  * Objects
  */
