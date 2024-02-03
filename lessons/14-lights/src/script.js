@@ -68,6 +68,14 @@ scene.add(spotLight);
 scene.add(spotLight.target);
 spotLight.target.position.x = -0.75;
 
+// Helpers
+
+const hemisphereLightHelper = new THREE.HemisphereLightHelper(
+  hemisphereLight,
+  0.2
+);
+scene.add(hemisphereLight);
+
 /**
  * Objects
  */
