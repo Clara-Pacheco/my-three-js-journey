@@ -89,9 +89,8 @@ scene.add(pointLightHelper);
 const spotLightHelper = new THREE.SpotLightHelper(spotLight);
 scene.add(spotLightHelper);
 
-window.requestAnimationFrame(() => {
-  spotLightHelper.update();
-});
+const rectAreaLightHelper = new RectAreaLightHelper(rectAreaLight);
+scene.add(rectAreaLightHelper);
 
 /**
  * Objects
