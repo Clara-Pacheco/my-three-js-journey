@@ -85,6 +85,9 @@ scene.add(directionaLightHelper);
 const pointLightHelper = new THREE.PointLightHelper(pointLight, 0.2);
 scene.add(pointLightHelper);
 
+const spotLightHelper = new THREE.SpotLightHelper(spotLight);
+scene.add(spotLightHelper);
+
 /**
  * Objects
  */
