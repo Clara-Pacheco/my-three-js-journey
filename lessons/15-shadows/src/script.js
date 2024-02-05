@@ -43,6 +43,10 @@ directionalLight.shadow.camera.right = 2;
 directionalLight.shadow.camera.bottom = -2;
 directionalLight.shadow.camera.left = -2;
 
+// Alter the blur of the shadow
+
+directionalLight.shadow.radius = 10;
+
 // DirectionalLightCameraHelper
 
 const directionalLightCameraHelper = new THREE.CameraHelper(
