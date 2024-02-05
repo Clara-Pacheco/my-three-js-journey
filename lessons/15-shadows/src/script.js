@@ -24,6 +24,7 @@ scene.add(ambientLight);
 
 // Directional light
 const directionalLight = new THREE.DirectionalLight(0xffffff, 1.5);
+directionalLight.castShadow = true;
 directionalLight.position.set(2, 2, -1);
 gui.add(directionalLight, "intensity").min(0).max(3).step(0.001);
 gui.add(directionalLight.position, "x").min(-5).max(5).step(0.001);
