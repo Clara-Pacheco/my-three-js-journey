@@ -49,6 +49,7 @@ const directionalLightCameraHelper = new THREE.CameraHelper(
   directionalLight.shadow.camera
 );
 scene.add(directionalLightCameraHelper);
+directionalLightCameraHelper.visible = false;
 
 directionalLight.position.set(2, 2, -1);
 gui.add(directionalLight, "intensity").min(0).max(3).step(0.001);
