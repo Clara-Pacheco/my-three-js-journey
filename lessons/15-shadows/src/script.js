@@ -26,8 +26,15 @@ scene.add(ambientLight);
 const directionalLight = new THREE.DirectionalLight(0xffffff, 1.5);
 directionalLight.castShadow = true;
 
+// Changing the size of the shadow map render
+
 directionalLight.shadow.mapSize.width = 1024;
 directionalLight.shadow.mapSize.height = 1024;
+
+// Changing the near and far proprieties
+
+directionalLight.shadow.camera.near = 1;
+directionalLight.shadow.camera.far = 6;
 
 // DirectionalLightCameraHelper
 
