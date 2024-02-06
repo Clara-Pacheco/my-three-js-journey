@@ -66,6 +66,12 @@ scene.add(directionalLight);
 
 const spotLight = new THREE.SpotLight(0xffffff, 3.6, 10, Math.PI * 0.3);
 spotLight.castShadow = true;
+// Changing the size of the spotLight shadow mapSize
+spotLight.shadow.mapSize.width = 1024;
+spotLight.shadow.mapSize.height = 1024;
+// Changing the values of near and far for the spotLight
+spotLight.shadow.camera.near = 1;
+spotLight.shadow.camera.far = 6;
 spotLight.position.set(0, 2, 2);
 scene.add(spotLight);
 scene.add(spotLight.target);
@@ -74,11 +80,6 @@ scene.add(spotLight.target);
 
 const spotLightCameraHelper = new THREE.CameraHelper(spotLight.shadow.camera);
 scene.add(spotLightCameraHelper);
-
-// Changing the size of the spotLight shadow mapSize
-
-spotLight.shadow.mapSize.width = 1024;
-spotLight.shadow.mapSize.height = 1024;
 
 /**
  * Materials
