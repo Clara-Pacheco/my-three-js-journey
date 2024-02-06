@@ -75,6 +75,11 @@ scene.add(spotLight.target);
 const spotLightCameraHelper = new THREE.CameraHelper(spotLight.shadow.camera);
 scene.add(spotLightCameraHelper);
 
+// Changing the size of the spotLight shadow mapSize
+
+spotLight.shadow.mapSize.width = 1024;
+spotLight.shadow.mapSize.height = 1024;
+
 /**
  * Materials
  */
