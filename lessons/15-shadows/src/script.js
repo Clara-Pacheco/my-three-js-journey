@@ -70,6 +70,11 @@ spotLight.position.set(0, 2, 2);
 scene.add(spotLight);
 scene.add(spotLight.target);
 
+// Add camera helper for the spotLight
+
+const spotLightCameraHelper = new THREE.CameraHelper(spotLight.shadow.camera);
+scene.add(spotLightCameraHelper);
+
 /**
  * Materials
  */
