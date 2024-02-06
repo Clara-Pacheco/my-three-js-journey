@@ -18,12 +18,12 @@ const scene = new THREE.Scene();
  * Lights
  */
 // Ambient light
-const ambientLight = new THREE.AmbientLight(0xffffff, 0.4);
+const ambientLight = new THREE.AmbientLight(0xffffff, 0.3);
 gui.add(ambientLight, "intensity").min(0).max(3).step(0.001);
 scene.add(ambientLight);
 
 // Directional light
-const directionalLight = new THREE.DirectionalLight(0xffffff, 0.4);
+const directionalLight = new THREE.DirectionalLight(0xffffff, 0.3);
 directionalLight.castShadow = true;
 
 // Changing the size of the shadow map render
@@ -64,7 +64,7 @@ scene.add(directionalLight);
 
 // SpotLight
 
-const spotLight = new THREE.SpotLight(0xffffff, 3.6, 10, Math.PI * 0.3);
+const spotLight = new THREE.SpotLight(0xffffff, 0.3, 10, Math.PI * 0.3);
 spotLight.castShadow = true;
 // Changing the size of the spotLight shadow mapSize
 spotLight.shadow.mapSize.width = 1024;
@@ -84,7 +84,7 @@ spotLightCameraHelper.visible = false;
 
 // PointLight
 
-const pointLight = new THREE.PointLight(0xffffff, 0.3);
+const pointLight = new THREE.PointLight(0xffffff, 3.6);
 pointLight.castShadow = true;
 pointLight.position.set(-1, 1, 0);
 scene.add(pointLight);
