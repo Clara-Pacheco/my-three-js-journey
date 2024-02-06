@@ -80,6 +80,7 @@ scene.add(spotLight.target);
 
 const spotLightCameraHelper = new THREE.CameraHelper(spotLight.shadow.camera);
 scene.add(spotLightCameraHelper);
+spotLightCameraHelper.visible = false;
 
 /**
  * Materials
