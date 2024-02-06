@@ -66,6 +66,7 @@ scene.add(directionalLight);
 
 const spotLight = new THREE.SpotLight(0xffffff, 3.6, 10, Math.PI * 0.3);
 spotLight.castShadow = true;
+spotLight.position.set(0, 2, 2);
 
 /**
  * Materials
