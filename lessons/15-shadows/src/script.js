@@ -133,6 +133,20 @@ plane.position.y = -0.5;
 
 scene.add(sphere, plane);
 
+const sphereShadow = new THREE.Mesh(
+  new THREE.PlaneGeometry(1.5, 1.5),
+  new THREE.MeshBasicMaterial({
+    color: 0xff0000,
+    transparent: true,
+    alphaMap: simplebakedShadow,
+  })
+);
+
+sphereShadow.rotation.x = -Math.PI * 0.5;
+sphereShadow.position.y = plane.position.y + 0.01;
+
+scene.add(sphereShadow);
+
 /**
  * Sizes
  */
