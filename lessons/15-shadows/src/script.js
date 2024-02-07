@@ -10,7 +10,8 @@ const textureLoader = new THREE.TextureLoader();
 const bakedShadow = textureLoader.load("../textures/bakedShadow.jpg");
 bakedShadow.colorSpace = THREE.SRGBColorSpace;
 
-console.log(bakedShadow);
+const simplebakedShadow = textureLoader.load("../textures/simpleShadow.jpg");
+console.log(simplebakedShadow);
 
 /**
  * Base
