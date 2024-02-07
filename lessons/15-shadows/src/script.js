@@ -7,10 +7,10 @@ import GUI from "lil-gui";
  */
 
 const textureLoader = new THREE.TextureLoader();
-const backedShadow = textureLoader.load("../textures/bakedShadow.jpg");
-backedShadow.colorSpace = THREE.SRGBColorSpace;
+const bakedShadow = textureLoader.load("../textures/bakedShadow.jpg");
+bakedShadow.colorSpace = THREE.SRGBColorSpace;
 
-console.log(backedShadow);
+console.log(bakedShadow);
 
 /**
  * Base
@@ -125,7 +125,12 @@ gui.add(material, "roughness").min(0).max(1).step(0.001);
 const sphere = new THREE.Mesh(new THREE.SphereGeometry(0.5, 32, 32), material);
 sphere.castShadow = true;
 
-const plane = new THREE.Mesh(new THREE.PlaneGeometry(5, 5), material);
+const plane = new THREE.Mesh(
+  new THREE.PlaneGeometry(5, 5),
+  new THREE.MeshBasicMaterial({
+    map: bakedShadow,
+  })
+);
 plane.receiveShadow = true;
 plane.rotation.x = -Math.PI * 0.5;
 plane.position.y = -0.5;
