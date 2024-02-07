@@ -3,6 +3,16 @@ import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
 import GUI from "lil-gui";
 
 /**
+ * Textures
+ */
+
+const textureLoader = new THREE.TextureLoader();
+const backedShadow = textureLoader.load("../textures/bakedShadow.jpg");
+backedShadow.colorSpace = THREE.SRGBColorSpace;
+
+console.log(backedShadow);
+
+/**
  * Base
  */
 // Debug
