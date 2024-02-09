@@ -35,6 +35,7 @@ const walls = new THREE.Mesh(
   new THREE.MeshStandardMaterial("#ac8e82")
 );
 
+walls.position.y = 2.5 / 2;
 house.add(walls);
 // Floor
 const floor = new THREE.Mesh(
