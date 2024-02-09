@@ -37,6 +37,16 @@ const walls = new THREE.Mesh(
 
 walls.position.y = 2.5 / 2;
 house.add(walls);
+
+// Roof
+
+const roof = new THREE.Mesh(
+  new THREE.ConeGeometry(3.5, 1, 4),
+  new THREE.MeshStandardMaterial("#b35f45")
+);
+
+house.add(roof);
+
 // Floor
 const floor = new THREE.Mesh(
   new THREE.PlaneGeometry(20, 20),
