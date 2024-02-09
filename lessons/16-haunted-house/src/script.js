@@ -32,7 +32,9 @@ scene.add(house);
 
 const walls = new THREE.Mesh(
   new THREE.BoxGeometry(4, 2.5, 4),
-  new THREE.MeshStandardMaterial("#ac8e82")
+  new THREE.MeshStandardMaterial({
+    color: "#ac8e82",
+  })
 );
 
 walls.position.y = 2.5 / 2;
@@ -42,8 +44,13 @@ house.add(walls);
 
 const roof = new THREE.Mesh(
   new THREE.ConeGeometry(3.5, 1, 4),
-  new THREE.MeshStandardMaterial("#b35f45")
+  new THREE.MeshStandardMaterial({
+    color: "#b35f45",
+  })
 );
+
+roof.position.y = 2.5 + 0.5;
+roof.rotation.y = Math.PI / 4;
 
 house.add(roof);
 
