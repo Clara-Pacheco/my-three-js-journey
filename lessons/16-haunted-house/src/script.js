@@ -22,14 +22,20 @@ const textureLoader = new THREE.TextureLoader();
 /**
  * House
  */
-// Temporary sphere
-// const sphere = new THREE.Mesh(
-//     new THREE.SphereGeometry(1, 32, 32),
-//     new THREE.MeshStandardMaterial({ roughness: 0.7 })
-// )
-// sphere.position.y = 1
-// scene.add(sphere)
 
+// Group
+
+const house = new THREE.Group();
+scene.add(house);
+
+// Walls
+
+const walls = new THREE.Mesh(
+  new THREE.BoxGeometry(1, 1, 1),
+  new THREE.MeshStandardMaterial("#ac8e82")
+);
+
+house.add(walls);
 // Floor
 const floor = new THREE.Mesh(
   new THREE.PlaneGeometry(20, 20),
