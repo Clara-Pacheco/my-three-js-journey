@@ -91,6 +91,14 @@ bush2.position.set(1.4, 0.1, 2.1);
 
 house.add(bush2);
 
+// Bush3
+const bush3 = new THREE.Mesh(bushGeometry, bushMaterial);
+
+bush3.scale.set(0.4, 0.4, 0.4);
+bush3.position.set(-0.8, 0.1, 2.2);
+
+house.add(bush3);
+
 // Floor
 const floor = new THREE.Mesh(
   new THREE.PlaneGeometry(20, 20),
