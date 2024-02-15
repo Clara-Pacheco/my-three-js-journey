@@ -108,6 +108,11 @@ bush4.position.set(-1, 0.05, 2.6);
 
 house.add(bush4);
 
+// Graves group
+
+const graves = new THREE.Group();
+scene.add(graves);
+
 // Floor
 const floor = new THREE.Mesh(
   new THREE.PlaneGeometry(20, 20),
