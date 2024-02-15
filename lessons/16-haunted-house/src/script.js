@@ -113,6 +113,12 @@ house.add(bush4);
 const graves = new THREE.Group();
 scene.add(graves);
 
+const gravesGeometry = new THREE.BoxGeometry(0.6, 0.8, 0.2);
+
+const gravesMaterial = new THREE.MeshStandardMaterial({
+  color: "#b2b6b1",
+});
+
 // Floor
 const floor = new THREE.Mesh(
   new THREE.PlaneGeometry(20, 20),
