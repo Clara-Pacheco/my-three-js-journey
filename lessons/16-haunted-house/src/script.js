@@ -77,6 +77,8 @@ const bushMaterial = new THREE.MeshStandardMaterial({
 
 const bush1 = new THREE.Mesh(bushGeometry, bushMaterial);
 
+bush1.scale.set(0.5, 0.5, 0.5);
+
 house.add(bush1);
 
 // Floor
