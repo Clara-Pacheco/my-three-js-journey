@@ -126,12 +126,16 @@ for (let i = 0; i < 50; i++) {
 
   // Use this angle to get a position on a circle
 
-  const x = Math.sin(angle);
-  const z = Math.cos(angle);
+  const x = Math.sin(angle) * 5;
+  const z = Math.cos(angle) * 5;
 
   // Create the object grave
 
   const grave = new THREE.Mesh(graveGeometry, graveMaterial);
+
+  // Move the graves
+
+  grave.position.set(x, 0, z);
 
   graves.add(grave);
 }
