@@ -120,14 +120,15 @@ const graveMaterial = new THREE.MeshStandardMaterial({
 });
 
 for (let i = 0; i < 50; i++) {
-  // Random angle on a circle
+  // Create a random radius and a random angle
 
+  const radius = 3 + Math.random() * 6;
   const angle = Math.random() * Math.PI * 2;
 
   // Use this angle to get a position on a circle
 
-  const x = Math.sin(angle) * 5;
-  const z = Math.cos(angle) * 5;
+  const x = Math.sin(angle) * radius;
+  const z = Math.cos(angle) * radius;
 
   // Create the object grave
 
