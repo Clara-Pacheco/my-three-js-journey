@@ -113,11 +113,28 @@ house.add(bush4);
 const graves = new THREE.Group();
 scene.add(graves);
 
-const gravesGeometry = new THREE.BoxGeometry(0.6, 0.8, 0.2);
+const graveGeometry = new THREE.BoxGeometry(0.6, 0.8, 0.2);
 
-const gravesMaterial = new THREE.MeshStandardMaterial({
+const graveMaterial = new THREE.MeshStandardMaterial({
   color: "#b2b6b1",
 });
+
+for (let i = 0; i < 50; i++) {
+  // Random angle on a circle
+
+  const angle = Math.random() * Math.PI * 2;
+
+  // Use this angle to get a position on a circle
+
+  const x = Math.sin(angle);
+  const z = Math.cos(angle);
+
+  // Create the object grave
+
+  const grave = new THREE.Mesh(graveGeometry, graveMaterial);
+
+  graves.add(grave);
+}
 
 // Floor
 const floor = new THREE.Mesh(
