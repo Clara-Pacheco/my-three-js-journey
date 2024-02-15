@@ -64,6 +64,7 @@ const door = new THREE.Mesh(
 );
 
 door.position.z = 2 + 0.01;
+door.position.y = 1;
 
 house.add(door);
 // Floor
