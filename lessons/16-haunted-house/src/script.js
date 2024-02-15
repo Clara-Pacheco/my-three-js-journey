@@ -136,7 +136,7 @@ for (let i = 0; i < 50; i++) {
 
   // Move the graves
 
-  grave.position.set(x, 0, z);
+  grave.position.set(x, 0.4, z);
 
   graves.add(grave);
 }
