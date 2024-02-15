@@ -67,6 +67,13 @@ door.position.z = 2 + 0.01;
 door.position.y = 1;
 
 house.add(door);
+
+// Bushes
+
+const bushGeometry = new THREE.SphereGeometry(1, 16, 16);
+const bushMaterial = new THREE.MeshStandardMaterial({
+  color: "#89c854",
+});
 // Floor
 const floor = new THREE.Mesh(
   new THREE.PlaneGeometry(20, 20),
