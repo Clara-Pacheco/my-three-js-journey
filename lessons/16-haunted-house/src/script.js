@@ -137,6 +137,7 @@ for (let i = 0; i < 50; i++) {
   // Move the graves
 
   grave.position.set(x, 0.3, z);
+  // grave.position.y = (Math.random() - 0.5) * 0.1;
   grave.rotation.y = (Math.random() - 0.5) * 0.4;
   grave.rotation.z = (Math.random() - 0.5) * 0.4;
 
