@@ -85,6 +85,8 @@ const door = new THREE.Mesh(
   new THREE.PlaneGeometry(2, 2),
   new THREE.MeshStandardMaterial({
     map: doorColorTexture,
+    alphaMap: doorAlphaTexture,
+    transparent: true,
   })
 );
 
