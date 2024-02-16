@@ -66,20 +66,29 @@ const bricksRoughnessTexture = textureLoader.load(
 
 const grassColorTexture = textureLoader.load("../textures/grass/color.jpg");
 grassColorTexture.colorSpace = THREE.SRGBColorSpace;
+grassColorTexture.repeat.set(8, 8);
+grassColorTexture.wrapS = THREE.RepeatWrapping;
+
 console.log(grassColorTexture);
 
 const grassAmbientOcclusionTexture = textureLoader.load(
   "../textures/grass/ambientOcclusion.jpg"
 );
 console.log(grassAmbientOcclusionTexture);
+grassAmbientOcclusionTexture.repeat.set(8, 8);
+grassAmbientOcclusionTexture.wrapS = THREE.RepeatWrapping;
 
 const grassNormalTexture = textureLoader.load("../textures/grass/normal.jpg");
 console.log(grassNormalTexture);
+grassNormalTexture.repeat.set(8, 8);
+grassNormalTexture.wrapS = THREE.RepeatWrapping;
 
 const grassRoughnessTexture = textureLoader.load(
   "../textures/grass/roughness.jpg"
 );
 console.log(grassRoughnessTexture);
+grassRoughnessTexture.repeat.set(8, 8);
+grassRoughnessTexture.wrapS = THREE.RepeatWrapping;
 
 /**
  * House
@@ -227,6 +236,7 @@ const floor = new THREE.Mesh(
     roughnessMap: grassRoughnessTexture,
   })
 );
+
 floor.rotation.x = -Math.PI * 0.5;
 floor.position.y = 0;
 scene.add(floor);
