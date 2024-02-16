@@ -77,6 +77,7 @@ const walls = new THREE.Mesh(
   new THREE.BoxGeometry(4, 2.5, 4),
   new THREE.MeshStandardMaterial({
     map: bricksColorTexture,
+    aoMap: bricksAmbientOcclusionTexture,
   })
 );
 
