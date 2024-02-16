@@ -78,6 +78,7 @@ const walls = new THREE.Mesh(
   new THREE.MeshStandardMaterial({
     map: bricksColorTexture,
     aoMap: bricksAmbientOcclusionTexture,
+    normalMap: bricksNormalTexture,
   })
 );
 
