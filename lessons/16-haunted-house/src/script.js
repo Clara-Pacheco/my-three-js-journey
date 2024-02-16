@@ -68,6 +68,7 @@ const grassColorTexture = textureLoader.load("../textures/grass/color.jpg");
 grassColorTexture.colorSpace = THREE.SRGBColorSpace;
 grassColorTexture.repeat.set(8, 8);
 grassColorTexture.wrapS = THREE.RepeatWrapping;
+grassColorTexture.wrapT = THREE.RepeatWrapping;
 
 console.log(grassColorTexture);
 
@@ -77,11 +78,13 @@ const grassAmbientOcclusionTexture = textureLoader.load(
 console.log(grassAmbientOcclusionTexture);
 grassAmbientOcclusionTexture.repeat.set(8, 8);
 grassAmbientOcclusionTexture.wrapS = THREE.RepeatWrapping;
+grassAmbientOcclusionTexture.wrapT = THREE.RepeatWrapping;
 
 const grassNormalTexture = textureLoader.load("../textures/grass/normal.jpg");
 console.log(grassNormalTexture);
 grassNormalTexture.repeat.set(8, 8);
 grassNormalTexture.wrapS = THREE.RepeatWrapping;
+grassNormalTexture.wrapT = THREE.RepeatWrapping;
 
 const grassRoughnessTexture = textureLoader.load(
   "../textures/grass/roughness.jpg"
@@ -89,6 +92,7 @@ const grassRoughnessTexture = textureLoader.load(
 console.log(grassRoughnessTexture);
 grassRoughnessTexture.repeat.set(8, 8);
 grassRoughnessTexture.wrapS = THREE.RepeatWrapping;
+grassRoughnessTexture.wrapT = THREE.RepeatWrapping;
 
 /**
  * House
