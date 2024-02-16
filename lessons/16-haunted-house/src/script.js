@@ -28,7 +28,7 @@ doorColorTexture.colorSpace = THREE.SRGBColorSpace;
 
 const doorAlphaTexture = textureLoader.load("../textures/door/alpha.jpg");
 
-const ambientOcclusionTexture = textureLoader.load(
+const doorAmbientOcclusionTexture = textureLoader.load(
   "../textures/door/ambientOcclusion.jpg"
 );
 
@@ -82,11 +82,13 @@ house.add(roof);
 // Door
 
 const door = new THREE.Mesh(
-  new THREE.PlaneGeometry(2, 2),
+  new THREE.PlaneGeometry(2, 2, 100, 100),
   new THREE.MeshStandardMaterial({
     map: doorColorTexture,
     alphaMap: doorAlphaTexture,
     transparent: true,
+    aoMap: doorAmbientOcclusionTexture,
+    displacementMap: doorHeightTexture,
   })
 );
 
