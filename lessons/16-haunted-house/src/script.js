@@ -92,6 +92,7 @@ const door = new THREE.Mesh(
     displacementScale: 0.1,
     normalMap: doorNormalTexture,
     metalnessMap: doorMetalnessTexture,
+    roughnessMap: doorRoughnessTexture,
   })
 );
 
