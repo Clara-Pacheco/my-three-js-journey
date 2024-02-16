@@ -224,6 +224,7 @@ const floor = new THREE.Mesh(
     map: grassColorTexture,
     aoMap: grassAmbientOcclusionTexture,
     normalMap: grassNormalTexture,
+    roughnessMap: grassRoughnessTexture,
   })
 );
 floor.rotation.x = -Math.PI * 0.5;
