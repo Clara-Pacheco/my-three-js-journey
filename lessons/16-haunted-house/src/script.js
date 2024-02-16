@@ -89,6 +89,7 @@ const door = new THREE.Mesh(
     transparent: true,
     aoMap: doorAmbientOcclusionTexture,
     displacementMap: doorHeightTexture,
+    displacementScale: 0.1,
   })
 );
 
