@@ -50,13 +50,18 @@ const doorRoughnessTexture = textureLoader.load(
 // Brick Textures
 
 const bricksColorTexture = textureLoader.load("../textures/bricks/color.jpg");
+bricksColorTexture.colorSpace = THREE.SRGBColorSpace;
+
 const bricksAmbientOcclusionTexture = textureLoader.load(
   "../textures/bricks/ambientOcclusion.jpg"
 );
+
 const bricksNormalTexture = textureLoader.load("../textures/bricks/normal.jpg");
+
 const bricksRoughnessTexture = textureLoader.load(
   "../textures/bricks/roughness.jpg"
 );
+
 /**
  * House
  */
@@ -71,7 +76,7 @@ scene.add(house);
 const walls = new THREE.Mesh(
   new THREE.BoxGeometry(4, 2.5, 4),
   new THREE.MeshStandardMaterial({
-    color: "#ac8e82",
+    map: bricksColorTexture,
   })
 );
 
