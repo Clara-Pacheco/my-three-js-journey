@@ -22,6 +22,9 @@ scene.fog = fog;
 /**
  * Textures
  */
+
+// Door Textures
+
 const textureLoader = new THREE.TextureLoader();
 const doorColorTexture = textureLoader.load("../textures/door/color.jpg");
 doorColorTexture.colorSpace = THREE.SRGBColorSpace;
@@ -44,6 +47,16 @@ const doorRoughnessTexture = textureLoader.load(
   "../textures/door/roughness.jpg"
 );
 
+// Brick Textures
+
+const bricksColorTexture = textureLoader.load("../textures/bricks/color.jpg");
+const bricksAmbientOcclusionTexture = textureLoader.load(
+  "../textures/bricks/ambientOcclusion.jpg"
+);
+const bricksNormalTexture = textureLoader.load("../textures/bricks/normal.jpg");
+const bricksRoughnessTexture = textureLoader.load(
+  "../textures/bricks/roughness.jpg"
+);
 /**
  * House
  */
