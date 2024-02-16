@@ -82,7 +82,7 @@ house.add(roof);
 // Door
 
 const door = new THREE.Mesh(
-  new THREE.PlaneGeometry(2, 2, 100, 100),
+  new THREE.PlaneGeometry(2.2, 2.2, 100, 100),
   new THREE.MeshStandardMaterial({
     map: doorColorTexture,
     alphaMap: doorAlphaTexture,
