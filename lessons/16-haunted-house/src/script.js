@@ -79,6 +79,7 @@ const walls = new THREE.Mesh(
     map: bricksColorTexture,
     aoMap: bricksAmbientOcclusionTexture,
     normalMap: bricksNormalTexture,
+    roughnessMap: bricksRoughnessTexture,
   })
 );
 
