@@ -341,7 +341,12 @@ renderer.shadowMap.enabled = true;
 
 moonLight.castShadow = true;
 doorLight.castShadow = true;
-ghost1.castShadow = true;
+
+// Optimze the shadow maps for the doorlight
+doorLight.shadow.mapSize.width = 256;
+doorLight.shadow.mapSize.height = 256;
+doorLight.shadow.camera.far = 7;
+
 ghost2.castShadow = true;
 ghost3.castShadow = true;
 
