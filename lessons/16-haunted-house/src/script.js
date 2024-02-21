@@ -336,11 +336,21 @@ renderer.setClearColor("#262837");
  */
 renderer.shadowMap.enabled = true;
 
+// Activate shadow on each light
+
 moonLight.castShadow = true;
 doorLight.castShadow = true;
 ghost1.castShadow = true;
 ghost2.castShadow = true;
 ghost3.castShadow = true;
+
+// Activate shadow on each object (casting or receiving shadow)
+
+walls.castShadow = true;
+bush1.castShadow = true;
+bush2.castShadow = true;
+bush3.castShadow = true;
+bush4.castShadow = true;
 
 /**
  * Animate
