@@ -226,6 +226,7 @@ for (let i = 0; i < 50; i++) {
   // grave.position.y = (Math.random() - 0.5) * 0.1;
   grave.rotation.y = (Math.random() - 0.5) * 0.4;
   grave.rotation.z = (Math.random() - 0.5) * 0.4;
+  grave.castShadow = true;
 
   graves.add(grave);
 }
