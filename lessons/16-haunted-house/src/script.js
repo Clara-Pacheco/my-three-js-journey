@@ -353,6 +353,10 @@ bush2.castShadow = true;
 bush3.castShadow = true;
 bush4.castShadow = true;
 
+// Activate receiving shadows on the floor
+
+floor.receiveShadow = true;
+
 /**
  * Animate
  */
