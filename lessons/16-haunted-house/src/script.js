@@ -211,7 +211,8 @@ for (let i = 0; i < 50; i++) {
   const radius = 3 + Math.random() * 6;
   const angle = Math.random() * Math.PI * 2;
 
-  // Use this angle to get a position on a circle
+  // Use this angle to get a position on a circle- when you use the same value
+  // on the Math.sin and Math.cos, you will get a position on the circle
 
   const x = Math.sin(angle) * radius;
   const z = Math.cos(angle) * radius;
@@ -346,6 +347,8 @@ doorLight.castShadow = true;
 doorLight.shadow.mapSize.width = 256;
 doorLight.shadow.mapSize.height = 256;
 doorLight.shadow.camera.far = 7;
+
+// Optimze the shadow maps for the ghosts
 
 ghost2.castShadow = true;
 ghost3.castShadow = true;
